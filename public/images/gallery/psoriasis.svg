@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#ddd6fe"/>
+  <ellipse cx="400" cy="320" rx="220" ry="140" fill="#a78bfa"/>
+  <circle cx="340" cy="300" r="18" fill="#7c3aed"/>
+  <circle cx="460" cy="340" r="16" fill="#7c3aed"/>
+  <text x="40" y="60" font-size="40" font-family="Arial" fill="#4c1d95">Plaque Psoriasis</text>
+</svg>

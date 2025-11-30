@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#fee2e2"/>
+  <rect x="200" y="180" width="360" height="240" rx="40" fill="#fca5a5"/>
+  <path d="M220 200 h320 v200 h-320 z" fill="#ef4444" opacity="0.25"/>
+  <text x="40" y="60" font-size="40" font-family="Arial" fill="#7f1d1d">Atopic Dermatitis</text>
+</svg>

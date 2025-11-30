@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g3)"/>
+  <ellipse cx="900" cy="300" rx="220" ry="140" fill="#38bdf8" opacity="0.4"/>
+  <ellipse cx="300" cy="600" rx="260" ry="160" fill="#2dd4bf" opacity="0.35"/>
+  <text x="70" y="140" font-family="Arial, sans-serif" font-size="64" fill="#ffffff" opacity="0.9">Expert Dermatology</text>
+  <text x="70" y="210" font-family="Arial, sans-serif" font-size="28" fill="#e5e7eb" opacity="0.9">Modern techniques, caring approach</text>
+</svg>

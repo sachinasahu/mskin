@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10b981"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <circle cx="400" cy="280" r="120" fill="#fff" opacity="0.95"/>
+  <rect x="240" y="420" width="320" height="260" rx="24" fill="#fff" opacity="0.95"/>
+  <rect x="360" y="480" width="80" height="160" fill="#e2e8f0"/>
+  <text x="270" y="720" font-family="Arial" font-size="28" fill="#ffffff">Board-Certified Dermatologist</text>
+</svg>

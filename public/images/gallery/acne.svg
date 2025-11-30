@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#fde68a"/>
+  <circle cx="260" cy="300" r="160" fill="#fca5a5"/>
+  <circle cx="360" cy="320" r="20" fill="#ef4444"/>
+  <circle cx="200" cy="260" r="16" fill="#ef4444"/>
+  <circle cx="300" cy="380" r="14" fill="#ef4444"/>
+  <text x="40" y="60" font-size="40" font-family="Arial" fill="#7c2d12">Acne Vulgaris</text>
+</svg>

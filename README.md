@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MS Clinic Dermatology Portfolio
+
+Next.js + Tailwind CSS portfolio site for a dermatology clinic. Includes hero slider, services, gallery, testimonials, contact, and appointment booking.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` to see the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Site URL (SEO)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Set your site URL for sitemap/Open Graph:
 
-## Learn More
+```
+NEXT_PUBLIC_SITE_URL=https://your-domain.example
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Appointment Email (Gmail SMTP - Free)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create `.env.local` with Gmail credentials for appointment notifications to bapunisahu7@gmail.com:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+GMAIL_USER=your-gmail@gmail.com
+GMAIL_APP_PASSWORD=your-app-password
+```
 
-## Deploy on Vercel
+**How to get Gmail App Password:**
+1. Enable 2-Step Verification on your Google account
+2. Go to https://myaccount.google.com/apppasswords
+3. Generate an app password for "Mail"
+4. Copy the 16-character password (no spaces)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If unset, appointments are logged to console only (no email sent).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Pages
+
+- `/` Home (hero slider, services, before/after, testimonials)
+- `/about` Doctor profile
+- `/services` Skin care guide
+- `/gallery` Educational skin conditions
+- `/contact` Contact info and form
+- `/appointments` Booking form
+
+## Images
+
+Replace placeholders under `public/images` and update `app/components/HeroSlider.tsx`.
+
+## Deployment (Free Hosting)
+
+### Option 1: Vercel (Recommended - Free)
+
+1. Push your code to GitHub
+2. Visit [vercel.com](https://vercel.com) and sign in with GitHub
+3. Click "New Project" and import your repository
+4. Add environment variables in project settings:
+   - `NEXT_PUBLIC_SITE_URL` (your Vercel URL, e.g., https://ms-clinic.vercel.app)
+   - `GMAIL_USER` (your Gmail address)
+   - `GMAIL_APP_PASSWORD` (Gmail app password from https://myaccount.google.com/apppasswords)
+5. Deploy automatically - Vercel will build and host your site
+
+**Auto-deploys:** Every push to `main` branch triggers automatic redeployment.
+
+### Option 2: Netlify (Free Alternative)
+
+1. Push code to GitHub
+2. Visit [netlify.com](https://netlify.com) and sign in
+3. Click "Add new site" > "Import an existing project"
+4. Connect to your GitHub repository
+5. Build settings:
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+6. Add environment variables in Site settings > Environment variables
+7. Deploy site
+
+### Option 3: Railway (Free with limits)
+
+1. Visit [railway.app](https://railway.app)
+2. Create new project from GitHub repo
+3. Add environment variables in Variables tab
+4. Railway auto-detects Next.js and deploys
+
+**Note:** After deployment, update `NEXT_PUBLIC_SITE_URL` with your live domain for proper sitemap/SEO.
