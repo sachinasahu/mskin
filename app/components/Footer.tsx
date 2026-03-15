@@ -2,75 +2,73 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-zinc-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-teal-600 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Clinic Info */}
-          <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold text-emerald-500 mb-4">MS Clinic</h3>
-            <p className="text-zinc-400 mb-4">
-              Expert dermatological care for healthy, radiant skin. Your trusted partner in skin health and wellness.
+          <div className="md:col-span-1">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="text-2xl">📍</div>
+              <div>
+                <p className="font-semibold">Our Clinic</p>
+                <p className="text-sm text-teal-100">Dr Manoj&apos;s Skin Clinic</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Address */}
+          <div className="md:col-span-1">
+            <p className="text-sm font-semibold mb-2">CLINIC LOCATIONS</p>
+            <p className="text-teal-100 text-sm">
+              <strong>Clinic No‑1:</strong> Unit‑4, Madhusudhan Nagar, Next to Truptee Restaurant, Bhubaneswar, Odisha 751001<br />
+              <strong>Clinic No‑2:</strong> Near Barracks High School, Berhampur, Ganjam, Odisha 760001
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-zinc-400 hover:text-emerald-500 transition-colors">
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+          </div>
+
+          {/* Phone */}
+          <div className="md:col-span-1">
+            <p className="text-sm font-semibold mb-2">CALL</p>
+            <p className="text-teal-100 text-sm">
+              +91 76570 15719<br />
+            </p>
+          </div>
+
+          {/* Contact */}
+          <div className="md:col-span-1">
+            <p className="text-sm font-semibold mb-2">EMAIL</p>
+            <p className="text-teal-100 text-sm">drmanojsskinclinic@gmail.com</p>
+            <div className="flex gap-4 mt-4">
+              <a href="#" className="hover:text-white transition-colors">
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8.29 20v-7.21h-2.3V9.25h2.3V7.31c0-2.87 1.77-4.43 4.29-4.43 1.22 0 2.26.09 2.56.13v2.97h-1.76c-1.38 0-1.64.66-1.64 1.62v2.12h3.28l-.43 3.54h-2.85V20z" />
                 </svg>
               </a>
-              <a href="#" className="text-zinc-400 hover:text-emerald-500 transition-colors">
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </a>
-              <a href="#" className="text-zinc-400 hover:text-emerald-500 transition-colors">
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+              <a href="#" className="hover:text-white transition-colors">
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
                 </svg>
               </a>
             </div>
           </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-zinc-400 hover:text-emerald-500 transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-zinc-400 hover:text-emerald-500 transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/gallery" className="text-zinc-400 hover:text-emerald-500 transition-colors">
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-zinc-400 hover:text-emerald-500 transition-colors">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 text-zinc-400">
-              <li>📍 3rd Lane Gandhi Nagar, Berhampur</li>
-              <li>📞 8050719779</li>
-              <li>✉️ contact@msclinic.com</li>
-              <li>🕐 Mon-Sat: 9AM-6PM</li>
-            </ul>
-          </div>
         </div>
 
-        <div className="border-t border-zinc-800 mt-8 pt-8 text-center text-zinc-400">
-          <p>&copy; {new Date().getFullYear()} MS Clinic. All rights reserved.</p>
+        <div className="border-t border-teal-500 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-sm text-teal-100">
+              &copy; {new Date().getFullYear()} Dr Manoj&apos;s Skin & Hair Clinic. All rights reserved.
+            </p>
+            <div className="flex gap-6 mt-4 md:mt-0 text-sm">
+              <a href="#" className="text-teal-100 hover:text-white transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-teal-100 hover:text-white transition-colors">
+                Terms & Conditions
+              </a>
+              <a href="#" className="text-teal-100 hover:text-white transition-colors">
+                Disclaimer
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

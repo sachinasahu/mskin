@@ -29,6 +29,7 @@ GMAIL_APP_PASSWORD=your-app-password
 ```
 
 **How to get Gmail App Password:**
+
 1. Enable 2-Step Verification on your Google account
 2. Go to https://myaccount.google.com/apppasswords
 3. Generate an app password for "Mail"

@@ -15,13 +15,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MS Clinic - Dermatology & Skin Care",
+  title: "Dr Manoj's Skin & Hair Clinic | Best Dermatologist in Bhubaneswar",
   description:
-    "Professional dermatological care: acne, anti-aging, screening, cosmetic procedures. Personalized, modern, and caring.",
+    "Dr Manoj's Skin & Hair Clinic offers advanced dermatology, hair restoration, laser treatments, and cosmetic skin care in Bhubaneswar. Book your consultation now.",
+  keywords: [
+    "dermatologist bhubaneswar",
+    "skin clinic bhubaneswar",
+    "hair clinic bhubaneswar",
+    "acne treatment",
+    "laser hair removal",
+    "skin rejuvenation",
+    "prp hair treatment",
+  ],
   openGraph: {
-    title: "MS Clinic - Dermatology & Skin Care",
+    title: "Dr Manoj's Skin & Hair Clinic | Bhubaneswar Dermatology",
     description:
-      "Professional dermatological care: acne, anti-aging, screening, cosmetic procedures.",
+      "Advanced dermatology, laser, and hair treatments in Bhubaneswar. Personalized care from Dr Manoj Kumar Nayak.",
     type: "website",
     locale: "en_US",
   },
@@ -38,8 +47,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white`}
       >
         <script
           type="application/ld+json"
@@ -48,14 +60,16 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "MedicalClinic",
-              name: "MS Clinic",
+              name: "Dr Manoj's Skin & Hair Clinic",
               medicalSpecialty: "Dermatology",
-              url: "https://example.com",
+              url: process.env.NEXT_PUBLIC_SITE_URL || "https://msclinic.com",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "3rd Lane Gandhi Nagar",
-                addressLocality: "Berhampur",
+                streetAddress:
+                  "Unit 4, Madhusudan Nagar, Near Truptee Restaurant, Old Ag Colony",
+                addressLocality: "Bhubaneswar",
                 addressRegion: "Odisha",
+                postalCode: "751001",
                 addressCountry: "IN",
               },
               contactPoint: {
@@ -67,7 +81,8 @@ export default function RootLayout({
                 "@type": "Physician",
                 name: "Dr. Manoj Kumar Nayak",
                 medicalSpecialty: "Dermatology",
-                description: "MBBS, MD (Skin & VD). AIIMS Rishikesh; Ex-Senior Resident, AIIMS Bhubaneswar",
+                description:
+                  "MBBS, MD (Skin & VD). AIIMS Rishikesh; Ex-Senior Resident, AIIMS Bhubaneswar",
               },
             }),
           }}
@@ -81,3 +96,4 @@ export default function RootLayout({
     </html>
   );
 }
+

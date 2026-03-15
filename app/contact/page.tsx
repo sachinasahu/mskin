@@ -55,7 +55,7 @@ export default function ContactPage() {
                   Visit Our Clinic
                 </h2>
                 <p className="text-zinc-600 dark:text-zinc-400 mb-8">
-                  We're here to help you achieve your skin health goals. Reach out to schedule 
+                  We are here to help you achieve your skin health goals. Reach out to schedule 
                   a consultation or ask any questions you may have.
                 </p>
               </div>
@@ -66,39 +66,48 @@ export default function ContactPage() {
                   <div className="text-3xl">📍</div>
                   <div>
                     <h3 className="font-semibold text-zinc-900 dark:text-white mb-1">
-                      Address
-                    </h3>
-                    <p className="text-zinc-600 dark:text-zinc-400">
-                      3rd Lane Gandhi Nagar<br />
-                      Berhampur, Odisha
-                    </p>
-                  </div>
+                    Clinic Locations
+                  </h3>
+                  <p className="text-zinc-600 dark:text-zinc-400">
+                    <strong>Clinic No-1</strong><br />
+                    Unit-4, Madhusudhan Nagar<br />
+                    Next to Truptee Restaurant<br />
+                    Bhubaneswar, Odisha 751001<br />
+                    <strong>Call:</strong> 7657015719
+                  </p>
+                  <p className="text-zinc-600 dark:text-zinc-400 mt-4">
+                    <strong>Clinic No-2</strong><br />
+                    Near Barracks High School<br />
+                    Berhampur, Ganjam, Odisha 760001<br />
+                    <strong>Call:</strong> 8093990134
+                  </p>
                 </div>
+              </div>
 
-                <div className="flex items-start gap-4 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
-                  <div className="text-3xl">📞</div>
-                  <div>
-                    <h3 className="font-semibold text-zinc-900 dark:text-white mb-1">
-                      Phone
-                    </h3>
-                    <p className="text-zinc-600 dark:text-zinc-400">
-                      Phone: 8050719779
-                    </p>
-                  </div>
+              <div className="flex items-start gap-4 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
+                <div className="text-3xl">📞</div>
+                <div>
+                  <h3 className="font-semibold text-zinc-900 dark:text-white mb-1">
+                    Phone
+                  </h3>
+                  <p className="text-zinc-600 dark:text-zinc-400">
+                    Primary: 7657015719<br />
+                    Secondary: 8093990134
+                  </p>
                 </div>
+              </div>
 
-                <div className="flex items-start gap-4 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
-                  <div className="text-3xl">✉️</div>
-                  <div>
-                    <h3 className="font-semibold text-zinc-900 dark:text-white mb-1">
-                      Email
-                    </h3>
-                    <p className="text-zinc-600 dark:text-zinc-400">
-                      info@msclinic.com<br />
-                      appointments@msclinic.com
-                    </p>
-                  </div>
+              <div className="flex items-start gap-4 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
+                <div className="text-3xl">✉️</div>
+                <div>
+                  <h3 className="font-semibold text-zinc-900 dark:text-white mb-1">
+                    Email
+                  </h3>
+                  <p className="text-zinc-600 dark:text-zinc-400">
+                    drmanojsskinclinic@gmail.com
+                  </p>
                 </div>
+              </div>
 
                 <div className="flex items-start gap-4 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-xl">
                   <div className="text-3xl">🕐</div>
@@ -157,7 +166,7 @@ export default function ContactPage() {
 
               {submitted && (
                 <div className="mb-6 p-4 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 rounded-lg">
-                  ✓ Message sent successfully! We'll get back to you soon.
+                  ✓ Message sent successfully! We will get back to you soon.
                 </div>
               )}
 

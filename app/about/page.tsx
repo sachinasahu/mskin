@@ -33,7 +33,7 @@ export default function AboutPage() {
                   Dr. Manoj Kumar Nayak
                 </h2>
                 <p className="text-xl text-emerald-600 dark:text-emerald-500 font-semibold">
-                  MBBS, MD, SKIN & VD. AIIMS Rishikesh
+                  Asst. Prof. IMS & Sum Hospital | MBBS, MD Dermatology (AIIMS)
                 </p>
               </div>
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
                   Dr. Manoj Kumar Nayak is an experienced dermatologist focused on evidence-based treatments and personalized care to help patients achieve healthy, beautiful skin.
                 </p>
                 <p>
-                  Former Senior Resident at AIIMS Bhubaneswar, with advanced training from AIIMS Rishikesh, Dr. Nayak specializes in medical, surgical, and cosmetic dermatology.
+                  Ex-Senior Resident at AIIMS Bhubaneswar and trained at AIIMS, Dr. Nayak specializes in medical, surgical, and cosmetic dermatology.
                 </p>
               </div>
 
@@ -53,11 +53,11 @@ export default function AboutPage() {
                 <ul className="space-y-2 text-zinc-600 dark:text-zinc-400">
                   <li className="flex items-start">
                     <span className="text-emerald-600 mr-2">✓</span>
-                    MBBS, MD (Skin & VD)
+                    Assistant Professor, IMS & Sum Hospital
                   </li>
                   <li className="flex items-start">
                     <span className="text-emerald-600 mr-2">✓</span>
-                    AIIMS Rishikesh (Dermatology)
+                    MBBS, MD Dermatology (AIIMS)
                   </li>
                   <li className="flex items-start">
                     <span className="text-emerald-600 mr-2">✓</span>
@@ -65,7 +65,7 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-emerald-600 mr-2">✓</span>
-                    Member, national dermatology associations
+                    Registered Medical Practitioner (Regn. No. 28352)
                   </li>
                 </ul>
               </div>
