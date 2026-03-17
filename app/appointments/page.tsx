@@ -1,8 +1,10 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function AppointmentsPage() {
+  const router = useRouter();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -37,6 +39,9 @@ export default function AppointmentsPage() {
       });
       if (res.ok) {
         setForm({ name: "", email: "", phone: "", date: "", time: "", service: "General Consultation", notes: "" });
+        setTimeout(() => {
+          router.push("/appointments");
+        }, 1500);
       }
     } catch (err) {
       setStatus({ ok: false, msg: "Network error" });
@@ -51,8 +56,12 @@ export default function AppointmentsPage() {
     <div className="min-h-screen">
       <section className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-zinc-950 dark:to-emerald-950 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-zinc-900 dark:text-white">Book an Appointment</h1>
-          <p className="text-zinc-600 dark:text-zinc-400 mt-3">Fill in your details and we’ll confirm shortly.</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-zinc-900 dark:text-white break-words leading-tight">
+            Book an Appointment
+          </h1>
+          <p className="text-zinc-600 dark:text-zinc-400 mt-3 text-base sm:text-lg">
+            Fill in your details and we’ll confirm shortly.
+          </p>
         </div>
       </section>
 

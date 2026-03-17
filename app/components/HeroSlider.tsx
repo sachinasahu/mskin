@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const slides = [
-  { src: "/images/hero1.svg", alt: "Dermatology care visual 1", headline: "Get Flawless Skin", sub: "Advanced treatments tailored for you" },
+  { src: "/clinic-logo.jpeg", alt: "Clinic logo", headline: "Get Flawless Skin", sub: "Advanced treatments tailored for you" },
   { src: "/images/hero2.svg", alt: "Dermatology care visual 2", headline: "Discover Your Glow", sub: "Personalized skincare solutions" },
   { src: "/images/hero3.svg", alt: "Dermatology care visual 3", headline: "Expert Dermatology", sub: "Modern techniques, caring approach" },
 ];

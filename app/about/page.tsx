@@ -23,7 +23,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Doctor Image */}
             <div className="relative h-96 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
-              <img src="/images/doctor.svg" alt="Doctor portrait" className="w-full h-full object-cover" />
+              <img src="/clinic-logo.jpeg" alt="Clinic logo" className="w-full h-full object-cover" />
             </div>
 
             {/* Doctor Info */}

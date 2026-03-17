@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,10 +13,12 @@ export default function Navbar() {
         <div className="flex items-center h-20">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">💙</span>
+            <div className="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center overflow-hidden">
+             <img src="/clinic-logo.jpeg" alt="business logo" className="w-full h-full object-cover" />
             </div>
-            <span className="text-xl font-bold text-teal-600">Dr Manoj&apos;s Skin Clinic</span>
+            <span className="text-xl font-bold text-teal-600">
+              Dr Manoj&apos;s Skin Clinic
+            </span>
           </div>
 
           {/* Desktop Menu */}
@@ -53,7 +56,6 @@ export default function Navbar() {
           </div>
 
           {/* Call Now Button */}
-         
         </div>
 
         {/* Mobile Menu */}
