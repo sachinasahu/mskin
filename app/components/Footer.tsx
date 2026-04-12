@@ -38,7 +38,7 @@ export default function Footer() {
             <p className="text-sm font-semibold mb-2">EMAIL</p>
             <p className="text-teal-100 text-sm">drmanojsskinclinic@gmail.com</p>
             <div className="flex gap-4 mt-4">
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="https://www.facebook.com/people/Dr-Manojs-Skin-Clinic/61586769355453/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8.29 20v-7.21h-2.3V9.25h2.3V7.31c0-2.87 1.77-4.43 4.29-4.43 1.22 0 2.26.09 2.56.13v2.97h-1.76c-1.38 0-1.64.66-1.64 1.62v2.12h3.28l-.43 3.54h-2.85V20z" />
                 </svg>

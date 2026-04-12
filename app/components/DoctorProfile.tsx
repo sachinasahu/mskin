@@ -6,12 +6,8 @@ export default function DoctorProfile() {
           {/* Doctor Image */}
           <div className="relative">
             <div className="absolute inset-0 bg-linear-to-br from-teal-400 to-blue-400 rounded-3xl blur-3xl opacity-20"></div>
-            <div className="relative bg-linear-to-br from-teal-100 to-blue-100 rounded-3xl p-8 flex items-center justify-center h-72 md:h-96">
-              <div className="text-center">
-                <div className="text-7xl mb-4">👨‍⚕️</div>
-                <p className="text-gray-700 font-semibold text-lg">Dr. XYZ, MD</p>
-                <p className="text-gray-600">Dermatology</p>
-              </div>
+            <div className="relative rounded-3xl overflow-hidden h-72 md:h-96 border-4 border-white shadow-xl">
+              <img src="/images/doPic.jpg" alt="Dr. Manoj Kumar Nayak" className="w-full h-full object-cover" />
             </div>
           </div>
 
@@ -19,7 +15,7 @@ export default function DoctorProfile() {
           <div className="space-y-6">
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-2">
-                Dr. XYZ, MD Dermatology
+                Dr. Manoj Kumar Nayak, MD Dermatology
               </h3>
               <p className="text-gray-600 text-lg leading-relaxed">
                 Experienced dermatologist with extensive knowledge in treating various skin conditions with personalized care and advanced techniques.

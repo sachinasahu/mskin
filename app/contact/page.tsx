@@ -147,7 +147,9 @@ export default function ContactPage() {
                     </svg>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.facebook.com/people/Dr-Manojs-Skin-Clinic/61586769355453/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full flex items-center justify-center transition-colors"
                   >
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

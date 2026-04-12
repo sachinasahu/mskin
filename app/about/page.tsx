@@ -22,8 +22,8 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Doctor Image */}
-            <div className="relative h-96 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
-              <img src="/clinic-logo.jpeg" alt="Clinic logo" className="w-full h-full object-cover" />
+            <div className="relative h-96 rounded-2xl overflow-hidden border-4 border-white shadow-xl">
+              <img src="/images/doPic.jpg" alt="Dr. Manoj Kumar Nayak" className="w-full h-full object-cover" />
             </div>
 
             {/* Doctor Info */}
