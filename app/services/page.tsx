@@ -1,129 +1,125 @@
-export default function ServicesPage() {
-  const skinCareRoutines = [
-    {
-      title: "Morning Routine",
-      icon: "🌅",
-      steps: [
-        { step: "Gentle Cleanser", desc: "Remove overnight oils and impurities" },
-        { step: "Toner", desc: "Balance skin pH and prep for treatment" },
-        { step: "Vitamin C Serum", desc: "Brighten and protect from free radicals" },
-        { step: "Moisturizer", desc: "Hydrate and lock in active ingredients" },
-        { step: "Sunscreen SPF 30+", desc: "Essential UV protection" },
-      ],
-    },
-    {
-      title: "Evening Routine",
-      icon: "🌙",
-      steps: [
-        { step: "Oil Cleanser", desc: "Remove makeup and sunscreen" },
-        { step: "Water-Based Cleanser", desc: "Deep clean pores" },
-        { step: "Exfoliant (2-3x/week)", desc: "Remove dead skin cells" },
-        { step: "Treatment Serum", desc: "Retinol or targeted treatment" },
-        { step: "Night Cream", desc: "Rich moisture for overnight repair" },
-      ],
-    },
-  ];
+'use client';
 
-  const skinTypes = [
+import Link from 'next/link';
+
+export default function ServicesPage() {
+  const clinicServices = [
     {
-      type: "Oily Skin",
-      icon: "💧",
-      color: "from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20",
-      tips: [
-        "Use gel-based, oil-free products",
-        "Salicylic acid for pore control",
-        "Lightweight, non-comedogenic moisturizer",
-        "Clay masks 1-2x per week",
-      ],
+      id: 1,
+      name: "Acne Treatment",
+      description: "Comprehensive acne treatment solutions including laser therapy, chemical peels, and advanced dermatological procedures.",
+      icon: "🔬",
+      treatments: ["Laser Treatment", "Chemical Peels", "Extraction", "Medication"],
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=300&fit=crop"
     },
     {
-      type: "Dry Skin",
-      icon: "🏜️",
-      color: "from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20",
-      tips: [
-        "Cream-based, hydrating cleansers",
-        "Hyaluronic acid for moisture retention",
-        "Rich, emollient moisturizers",
-        "Avoid harsh exfoliants",
-      ],
+      id: 2,
+      name: "Anti-Aging Treatments",
+      description: "Advanced anti-aging procedures to reduce wrinkles, fine lines, and restore youthful skin appearance.",
+      icon: "💆",
+      treatments: ["Botox", "Dermal Fillers", "Microdermabrasion", "Laser Resurfacing"],
+      image: "https://images.unsplash.com/photo-1570172619644-dfd03cb5f913?w=500&h=300&fit=crop"
     },
     {
-      type: "Combination Skin",
-      icon: "⚖️",
-      color: "from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20",
-      tips: [
-        "Gentle, balanced cleansers",
-        "Multi-masking for different zones",
-        "Lightweight moisturizer overall",
-        "Spot-treat oily and dry areas separately",
-      ],
+      id: 3,
+      name: "Hair Loss Treatment",
+      description: "Specialized hair restoration and loss prevention treatments tailored to your hair type and condition.",
+      icon: "💇",
+      treatments: ["PRP Therapy", "Minoxidil", "Hair Transplant", "Laser Therapy"],
+      image: "https://images.unsplash.com/photo-1570172619644-dfd03cb5f913?w=500&h=300&fit=crop"
     },
     {
-      type: "Sensitive Skin",
-      icon: "🌸",
-      color: "from-rose-50 to-pink-50 dark:from-rose-900/20 dark:to-pink-900/20",
-      tips: [
-        "Fragrance-free, minimal ingredients",
-        "Patch test new products",
-        "Gentle, soothing formulas",
-        "Avoid harsh actives initially",
-      ],
+      id: 4,
+      name: "Pigmentation & Brightening",
+      description: "Treat dark spots, melasma, and uneven skin tone with our advanced pigmentation correction services.",
+      icon: "✨",
+      treatments: ["Laser Therapy", "Chemical Peels", "Microdermabrasion", "Topical Treatments"],
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&h=300&fit=crop"
+    },
+    {
+      id: 5,
+      name: "Skin Rejuvenation",
+      description: "Non-invasive and minimally invasive procedures to rejuvenate and refresh your skin's natural radiance.",
+      icon: "🌟",
+      treatments: ["Facial", "HydraFacial", "Microneedling", "Chemical Peel"],
+      image: "https://images.unsplash.com/photo-1556745753-b2904692573f?w=500&h=300&fit=crop"
+    },
+    {
+      id: 6,
+      name: "Dermatological Surgery",
+      description: "Specialized surgical procedures for moles, warts, cysts, and other skin conditions with minimal scarring.",
+      icon: "🔪",
+      treatments: ["Mole Removal", "Wart Removal", "Cyst Extraction", "Scar Revision"],
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=300&fit=crop"
     },
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-zinc-950 dark:to-emerald-950 py-20">
+      <section className="bg-gradient-to-br from-white via-teal-50 to-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-zinc-900 dark:text-white mb-6">
-              Skin Care <span className="text-emerald-600 dark:text-emerald-500">Guide</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Our <span className="text-teal-600">Services</span>
             </h1>
-            <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl mx-auto">
-              Expert tips and routines for maintaining healthy, radiant skin every day
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive dermatological and aesthetic treatments tailored to meet your unique skin and hair needs
             </p>
           </div>
         </div>
       </section>
 
-      {/* Daily Routines */}
-      <section className="py-20 bg-white dark:bg-zinc-900">
+      {/* Services Grid */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zinc-900 dark:text-white mb-4">
-              Daily Skincare Routines
-            </h2>
-            <p className="text-xl text-zinc-600 dark:text-zinc-400">
-              Follow these essential steps for optimal skin health
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {skinCareRoutines.map((routine, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-2xl p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="text-4xl">{routine.icon}</span>
-                  <h3 className="text-2xl font-bold text-zinc-900 dark:text-white">
-                    {routine.title}
-                  </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {clinicServices.map((service) => (
+              <div key={service.id} className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                {/* Image Container */}
+                <div className="w-full h-48 bg-gray-200 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.name}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <div className="space-y-4">
-                  {routine.steps.map((item, index) => (
-                    <div key={index} className="flex gap-4">
-                      <div className="flex-shrink-0 w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center font-semibold">
-                        {index + 1}
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-zinc-900 dark:text-white">
-                          {item.step}
-                        </h4>
-                        <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                          {item.desc}
-                        </p>
-                      </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-4xl">{service.icon}</span>
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      {service.name}
+                    </h3>
+                  </div>
+
+                  <p className="text-gray-600 mb-4">
+                    {service.description}
+                  </p>
+
+                  {/* Treatments List */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-700 mb-3">Available Treatments:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {service.treatments.map((treatment, idx) => (
+                        <span 
+                          key={idx}
+                          className="px-3 py-1 bg-teal-100 text-teal-700 text-xs font-medium rounded-full"
+                        >
+                          {treatment}
+                        </span>
+                      ))}
                     </div>
-                  ))}
+                  </div>
+
+                  {/* CTA Button */}
+                  <Link 
+                    href="/appointments"
+                    className="block w-full py-3 px-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-colors text-center"
+                  >
+                    Book Appointment
+                  </Link>
                 </div>
               </div>
             ))}
@@ -131,92 +127,70 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Skin Type Guides */}
-      <section className="py-20 bg-zinc-50 dark:bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zinc-900 dark:text-white mb-4">
-              Care by Skin Type
-            </h2>
-            <p className="text-xl text-zinc-600 dark:text-zinc-400">
-              Customized tips for your unique skin needs
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {skinTypes.map((skin, idx) => (
-              <div
-                key={idx}
-                className={`bg-gradient-to-br ${skin.color} rounded-2xl p-6`}
-              >
-                <div className="text-4xl mb-3">{skin.icon}</div>
-                <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-4">
-                  {skin.type}
-                </h3>
-                <ul className="space-y-2">
-                  {skin.tips.map((tip, index) => (
-                    <li key={index} className="flex items-start text-sm text-zinc-700 dark:text-zinc-300">
-                      <span className="text-emerald-600 mr-2 flex-shrink-0">✓</span>
-                      <span>{tip}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Importance Section */}
-      <section className="py-20 bg-white dark:bg-zinc-900">
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-zinc-900 dark:text-white mb-4">
-              Why Skincare Matters
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Services?
             </h2>
           </div>
 
-          <div className="space-y-6 text-zinc-600 dark:text-zinc-400">
-            <div className="p-6 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl">
-              <h3 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-                <span>🛡️</span> Protection from Environmental Damage
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-6 bg-white rounded-xl border border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                <span>👨‍⚕️</span> Expert Consultation
               </h3>
-              <p>
-                Daily skincare creates a barrier against pollution, UV rays, and free radicals that 
-                accelerate aging and damage skin cells. Consistent protection is your first line of defense.
+              <p className="text-gray-600">
+                Personalized treatment plans designed by experienced dermatologists based on your specific skin condition and goals.
               </p>
             </div>
 
-            <div className="p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
-              <h3 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-                <span>💧</span> Moisture Balance & Hydration
+            <div className="p-6 bg-white rounded-xl border border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                <span>🏥</span> Advanced Technology
               </h3>
-              <p>
-                Proper hydration maintains skin elasticity, prevents premature wrinkles, and keeps 
-                your complexion glowing. Well-moisturized skin is healthier and more resilient.
+              <p className="text-gray-600">
+                State-of-the-art equipment and cutting-edge techniques for safe, effective and quick results.
               </p>
             </div>
 
-            <div className="p-6 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
-              <h3 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-                <span>🔬</span> Prevention & Early Detection
+            <div className="p-6 bg-white rounded-xl border border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                <span>✨</span> Quality Results
               </h3>
-              <p>
-                Regular skincare routines help you notice changes in your skin early, enabling timely 
-                treatment of concerns like acne, discoloration, or unusual growths.
+              <p className="text-gray-600">
+                Proven track record of delivering visible improvements and transformations with natural-looking results.
               </p>
             </div>
 
-            <div className="p-6 bg-pink-50 dark:bg-pink-900/20 rounded-xl">
-              <h3 className="text-xl font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-                <span>✨</span> Confidence & Well-being
+            <div className="p-6 bg-white rounded-xl border border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                <span>❤️</span> Patient Care
               </h3>
-              <p>
-                Healthy skin boosts self-confidence and overall well-being. A consistent routine is 
-                an act of self-care that benefits both your appearance and mental health.
+              <p className="text-gray-600">
+                Compassionate care with attention to your comfort, concerns, and complete satisfaction throughout your treatment.
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-teal-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Skin?
+          </h2>
+          <p className="text-xl text-teal-50 mb-8">
+            Schedule your consultation today and take the first step toward healthier, radiant skin.
+          </p>
+          <Link 
+            href="/appointments"
+            className="inline-block px-8 py-4 bg-white text-teal-600 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg"
+          >
+            Book Your Appointment Now
+          </Link>
         </div>
       </section>
     </div>

@@ -57,17 +57,6 @@ export default function Footer() {
             <p className="text-sm text-teal-100">
               &copy; {new Date().getFullYear()} Dr Manoj&apos;s Skin & Hair Clinic. All rights reserved.
             </p>
-            <div className="flex gap-6 mt-4 md:mt-0 text-sm">
-              <a href="#" className="text-teal-100 hover:text-white transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-teal-100 hover:text-white transition-colors">
-                Terms & Conditions
-              </a>
-              <a href="#" className="text-teal-100 hover:text-white transition-colors">
-                Disclaimer
-              </a>
-            </div>
           </div>
         </div>
       </div>

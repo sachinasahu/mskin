@@ -1,7 +1,7 @@
 export default function Services() {
   const services = [
     {
-      icon: "�",
+      icon: "💆",
       title: "Skin Treatments",
       items: [
         "Pimples & Acne Scar",
