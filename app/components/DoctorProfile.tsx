@@ -9,7 +9,7 @@ export default function DoctorProfile() {
           <div className="relative">
             <div className="absolute inset-0 bg-linear-to-br from-teal-400 to-blue-400 rounded-3xl blur-3xl opacity-20"></div>
             <div className="relative rounded-3xl overflow-hidden h-72 md:h-96 border-4 border-white shadow-xl">
-              <img src="/images/doPic.jpg" alt="Dr. Manoj Kumar Nayak" className="w-full h-full object-cover" />
+              <img src="/images/doPic.jpg" alt="Dr. Manoj Kumar Nayak" className="w-full h-half object-cover" />
             </div>
           </div>
 
