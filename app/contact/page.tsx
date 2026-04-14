@@ -260,14 +260,18 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Placeholder */}
-      <section className="h-96 bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center">
-        <div className="text-center">
-          <div className="text-6xl mb-4">🗺️</div>
-          <p className="text-zinc-600 dark:text-zinc-400">
-            [Google Maps embed would go here]
-          </p>
-        </div>
+      {/* Map Section */}
+      <section className="w-full h-96 rounded-3xl overflow-hidden shadow-lg">
+        <iframe
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          title="Dr Manoj's Skin Clinic Location"
+          src="https://maps.google.com/maps?q=20.28376074462255,85.83487535145416&hl=en&z=17&output=embed"
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </section>
     </div>
   );

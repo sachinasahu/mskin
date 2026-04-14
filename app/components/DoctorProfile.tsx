@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function DoctorProfile() {
   return (
     <section className="py-20 bg-white">
@@ -29,7 +31,9 @@ export default function DoctorProfile() {
               </div>
               <div className="flex items-start gap-3">
                 <div className="text-teal-600 text-xl shrink-0">✓</div>
-                <p className="text-gray-700 font-medium">Ex-Consultant, XYZ Hospital</p>
+                <p className="text-gray-700 font-medium">Asst. Prof. IMS & Sum Hospital
+M.B.B.S., MD, Dermatology (AIIMS)
+Ex-Senior Resident, AlIMS, Bhubaneswar</p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="text-teal-600 text-xl shrink-0">✓</div>
@@ -37,9 +41,9 @@ export default function DoctorProfile() {
               </div>
             </div>
 
-            <button className="px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white rounded-lg font-bold transition-colors">
+            <Link href="/appointments" className="px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white rounded-lg font-bold transition-colors inline-block">
               Book Appointment
-            </button>
+            </Link>
           </div>
         </div>
       </div>
