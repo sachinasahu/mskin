@@ -10,7 +10,7 @@ export default function ServicesPage() {
       description: "Comprehensive acne treatment solutions including laser therapy, chemical peels, and advanced dermatological procedures.",
       icon: "🔬",
       treatments: ["Laser Treatment", "Chemical Peels", "Extraction", "Medication"],
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=300&fit=crop"
+      image: "/images/Acne_Treatment.png"
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ export default function ServicesPage() {
       description: "Advanced anti-aging procedures to reduce wrinkles, fine lines, and restore youthful skin appearance.",
       icon: "💆",
       treatments: ["Botox", "Dermal Fillers", "Microdermabrasion", "Laser Resurfacing"],
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03cb5f913?w=500&h=300&fit=crop"
+      image: "/images/Anti_Aging_Treatments.png"
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ export default function ServicesPage() {
       description: "Specialized hair restoration and loss prevention treatments tailored to your hair type and condition.",
       icon: "💇",
       treatments: ["PRP Therapy", "Minoxidil", "Hair Transplant", "Laser Therapy"],
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03cb5f913?w=500&h=300&fit=crop"
+      image: "/images/hair_treatment.png"
     },
     {
       id: 4,
@@ -34,7 +34,7 @@ export default function ServicesPage() {
       description: "Treat dark spots, melasma, and uneven skin tone with our advanced pigmentation correction services.",
       icon: "✨",
       treatments: ["Laser Therapy", "Chemical Peels", "Microdermabrasion", "Topical Treatments"],
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&h=300&fit=crop"
+      image: "/images/Pigmentation.png"
     },
     {
       id: 5,
@@ -42,15 +42,15 @@ export default function ServicesPage() {
       description: "Non-invasive and minimally invasive procedures to rejuvenate and refresh your skin's natural radiance.",
       icon: "🌟",
       treatments: ["Facial", "HydraFacial", "Microneedling", "Chemical Peel"],
-      image: "https://images.unsplash.com/photo-1556745753-b2904692573f?w=500&h=300&fit=crop"
+      image: "/images/Skin_Rejuvenation.png"
     },
     {
       id: 6,
       name: "Dermatological Surgery",
       description: "Specialized surgical procedures for moles, warts, cysts, and other skin conditions with minimal scarring.",
-      icon: "🔪",
+      icon: "⚕️",
       treatments: ["Mole Removal", "Wart Removal", "Cyst Extraction", "Scar Revision"],
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=300&fit=crop"
+      image: "/images/Dermatological.png"
     },
   ];
 
