@@ -2,83 +2,70 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
+    <div style={{ background: "var(--pearl)", minHeight: "100vh", paddingTop: "120px" }}>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-zinc-950 dark:to-emerald-950 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-zinc-900 dark:text-white mb-6">
-              About <span className="text-emerald-600 dark:text-emerald-500">Our Clinic</span>
+      <section style={{ padding: "0 72px 80px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "64px" }} className="reveal is-visible">
+            <span className="eyebrow" style={{ justifyContent: "center" }}>Our Clinic</span>
+            <h1 className="display-heading philosophy-heading">
+              About <em style={{ color: "var(--copper)" }}>Dr. Manoj's Clinic</em>
             </h1>
-            <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl mx-auto">
-              Dedicated to providing world-class dermatological care with compassion and expertise
+            <p className="philosophy-desc" style={{ maxWidth: "600px", margin: "0 auto" }}>
+              Dedicated to providing world-class dermatological care with compassion and expertise.
             </p>
           </div>
         </div>
       </section>
 
       {/* Doctor Profile Section */}
-      <section className="py-20 bg-white dark:bg-zinc-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section style={{ background: "var(--white)", padding: "100px 72px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
             {/* Doctor Image */}
-            <div className="relative h-96 rounded-2xl overflow-hidden border-4 border-white shadow-xl">
-              <img src="/images/doPic.jpg" alt="Dr. Manoj Kumar Nayak" className="w-full h-full object-cover" />
+            <div className="reveal is-visible" style={{ position: "relative", minHeight: "500px", overflow: "hidden", background: "#C4B8B0", borderRadius: "4px" }}>
+              <img src="/images/doPic.jpg" alt="Dr. Manoj Kumar Nayak" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "contrast(1.05) brightness(0.95)" }} />
             </div>
 
             {/* Doctor Info */}
-            <div className="space-y-6">
-              <div>
-                <h2 className="text-4xl font-bold text-zinc-900 dark:text-white mb-2">
-                  Dr. Manoj Kumar Nayak
-                </h2>
-                <p className="text-xl text-emerald-600 dark:text-emerald-500 font-semibold">
-                  Asst. Prof. IMS & Sum Hospital | MBBS, MD Dermatology (AIIMS)
-                </p>
-              </div>
+            <div className="reveal is-visible" style={{ display: "flex", flexDirection: "column" }}>
+              <h2 className="display-heading doctor-name" style={{ marginBottom: "6px" }}>
+                Dr. Manoj Kumar Nayak
+              </h2>
+              <p className="doctor-credential-tag">
+                Asst. Prof. IMS & Sum Hospital | MBBS, MD Dermatology (AIIMS)
+              </p>
 
-              <div className="space-y-4 text-zinc-600 dark:text-zinc-400">
-                <p className="text-lg">
+              <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "36px" }}>
+                <p className="doctor-bio" style={{ marginBottom: "0", maxWidth: "100%" }}>
                   Dr. Manoj Kumar Nayak is an experienced dermatologist focused on evidence-based treatments and personalized care to help patients achieve healthy, beautiful skin.
                 </p>
-                <p>
+                <p className="doctor-bio" style={{ marginBottom: "0", maxWidth: "100%" }}>
                   Ex-Senior Resident at AIIMS Bhubaneswar and trained at AIIMS, Dr. Nayak specializes in medical, surgical, and cosmetic dermatology.
                 </p>
               </div>
 
-              <div className="space-y-3">
-                <h3 className="text-xl font-semibold text-zinc-900 dark:text-white">
+              <div style={{ marginBottom: "36px" }}>
+                <h3 className="pillar-title" style={{ fontSize: "20px" }}>
                   Credentials & Education
                 </h3>
-                <ul className="space-y-2 text-zinc-600 dark:text-zinc-400">
-                  <li className="flex items-start">
-                    <span className="text-emerald-600 mr-2">✓</span>
-                    Assistant Professor, IMS & Sum Hospital
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-emerald-600 mr-2">✓</span>
-                    MBBS, MD Dermatology (AIIMS)
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-emerald-600 mr-2">✓</span>
-                    Ex-Senior Resident, AIIMS Bhubaneswar
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-emerald-600 mr-2">✓</span>
-                    Registered Medical Practitioner (Regn. No. 28352)
-                  </li>
+                <ul className="credential-list" style={{ marginBottom: "0" }}>
+                  <li><span className="cred-dot"></span>Assistant Professor, IMS & Sum Hospital</li>
+                  <li><span className="cred-dot"></span>MBBS, MD Dermatology (AIIMS)</li>
+                  <li><span className="cred-dot"></span>Ex-Senior Resident, AIIMS Bhubaneswar</li>
+                  <li><span className="cred-dot"></span>Registered Medical Practitioner (Regn. No. 28352)</li>
                 </ul>
               </div>
 
-              <div className="space-y-3">
-                <h3 className="text-xl font-semibold text-zinc-900 dark:text-white">
+              <div>
+                <h3 className="pillar-title" style={{ fontSize: "20px", marginBottom: "16px" }}>
                   Specializations
                 </h3>
-                <div className="flex flex-wrap gap-2">
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
                   {["Acne Treatment", "Anti-Aging", "Laser Therapy", "Skin Cancer", "Cosmetic Dermatology", "Pediatric Dermatology"].map((spec, index) => (
                     <span
                       key={index}
-                      className="px-4 py-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 rounded-full text-sm font-medium"
+                      style={{ padding: "8px 16px", background: "var(--sage-tint)", color: "var(--forest)", borderRadius: "3px", fontSize: "13px", fontWeight: 500 }}
                     >
                       {spec}
                     </span>
@@ -91,41 +78,41 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Values */}
-      <section className="py-20 bg-zinc-50 dark:bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zinc-900 dark:text-white mb-4">
-              Our Mission & Values
+      <section style={{ padding: "100px 72px", background: "var(--sage-tint)" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "64px" }} className="reveal is-visible">
+            <h2 className="display-heading philosophy-heading">
+              Our Mission & <em>Values</em>
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 bg-white dark:bg-zinc-900 rounded-2xl text-center">
-              <div className="text-5xl mb-4">🎯</div>
-              <h3 className="text-2xl font-semibold text-zinc-900 dark:text-white mb-3">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "24px" }}>
+            <div className="reveal is-visible" style={{ background: "var(--white)", padding: "40px", borderRadius: "4px", textAlign: "center", border: "1px solid var(--border)" }}>
+              <div style={{ fontSize: "40px", marginBottom: "16px" }}>🎯</div>
+              <h3 className="pillar-title" style={{ fontSize: "24px", marginBottom: "12px", textAlign: "center" }}>
                 Excellence
               </h3>
-              <p className="text-zinc-600 dark:text-zinc-400">
+              <p className="philosophy-desc" style={{ textAlign: "center" }}>
                 Committed to providing the highest standard of dermatological care using the latest research and technology.
               </p>
             </div>
 
-            <div className="p-8 bg-white dark:bg-zinc-900 rounded-2xl text-center">
-              <div className="text-5xl mb-4">💚</div>
-              <h3 className="text-2xl font-semibold text-zinc-900 dark:text-white mb-3">
+            <div className="reveal is-visible" style={{ background: "var(--white)", padding: "40px", borderRadius: "4px", textAlign: "center", border: "1px solid var(--border)" }}>
+              <div style={{ fontSize: "40px", marginBottom: "16px" }}>💚</div>
+              <h3 className="pillar-title" style={{ fontSize: "24px", marginBottom: "12px", textAlign: "center" }}>
                 Compassion
               </h3>
-              <p className="text-zinc-600 dark:text-zinc-400">
+              <p className="philosophy-desc" style={{ textAlign: "center" }}>
                 Every patient deserves personalized attention and care in a welcoming, comfortable environment.
               </p>
             </div>
 
-            <div className="p-8 bg-white dark:bg-zinc-900 rounded-2xl text-center">
-              <div className="text-5xl mb-4">🔬</div>
-              <h3 className="text-2xl font-semibold text-zinc-900 dark:text-white mb-3">
+            <div className="reveal is-visible" style={{ background: "var(--white)", padding: "40px", borderRadius: "4px", textAlign: "center", border: "1px solid var(--border)" }}>
+              <div style={{ fontSize: "40px", marginBottom: "16px" }}>🔬</div>
+              <h3 className="pillar-title" style={{ fontSize: "24px", marginBottom: "12px", textAlign: "center" }}>
                 Innovation
               </h3>
-              <p className="text-zinc-600 dark:text-zinc-400">
+              <p className="philosophy-desc" style={{ textAlign: "center" }}>
                 Embracing cutting-edge treatments and AI-powered diagnostics for better patient outcomes.
               </p>
             </div>

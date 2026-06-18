@@ -55,57 +55,58 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div style={{ background: "var(--pearl)", minHeight: "100vh", paddingTop: "120px" }}>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-white via-teal-50 to-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Our <span className="text-teal-600">Services</span>
+      <section style={{ padding: "0 72px 80px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "64px" }} className="reveal is-visible">
+            <span className="eyebrow" style={{ justifyContent: "center" }}>What We Do</span>
+            <h1 className="display-heading philosophy-heading">
+              Our <em style={{ color: "var(--copper)" }}>Services</em>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive dermatological and aesthetic treatments tailored to meet your unique skin and hair needs
+            <p className="philosophy-desc" style={{ maxWidth: "600px", margin: "0 auto" }}>
+              Comprehensive dermatological and aesthetic treatments tailored to meet your unique skin and hair needs.
             </p>
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section style={{ background: "var(--white)", padding: "100px 72px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "40px" }}>
             {clinicServices.map((service) => (
-              <div key={service.id} className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+              <div key={service.id} className="reveal is-visible" style={{ border: "1px solid var(--border)", borderRadius: "4px", overflow: "hidden", display: "flex", flexDirection: "column" }}>
                 {/* Image Container */}
-                <div className="w-full h-48 bg-gray-200 overflow-hidden">
+                <div style={{ width: "100%", height: "240px", overflow: "hidden", background: "var(--sage-tint)" }}>
                   <img 
                     src={service.image} 
                     alt={service.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   />
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-4xl">{service.icon}</span>
-                    <h3 className="text-2xl font-bold text-gray-900">
+                <div style={{ padding: "32px", display: "flex", flexDirection: "column", flexGrow: 1 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
+                    <span style={{ fontSize: "28px" }}>{service.icon}</span>
+                    <h3 className="pillar-title" style={{ marginBottom: "0", fontSize: "22px" }}>
                       {service.name}
                     </h3>
                   </div>
 
-                  <p className="text-gray-600 mb-4">
+                  <p className="philosophy-desc" style={{ marginBottom: "24px" }}>
                     {service.description}
                   </p>
 
                   {/* Treatments List */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-700 mb-3">Available Treatments:</h4>
-                    <div className="flex flex-wrap gap-2">
+                  <div style={{ marginBottom: "32px", flexGrow: 1 }}>
+                    <h4 style={{ fontSize: "12px", fontWeight: 600, color: "var(--mist)", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "12px" }}>Available Treatments:</h4>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
                       {service.treatments.map((treatment, idx) => (
                         <span 
                           key={idx}
-                          className="px-3 py-1 bg-teal-100 text-teal-700 text-xs font-medium rounded-full"
+                          style={{ padding: "6px 12px", background: "var(--sage-tint)", color: "var(--forest)", borderRadius: "3px", fontSize: "12px", fontWeight: 500 }}
                         >
                           {treatment}
                         </span>
@@ -116,7 +117,8 @@ export default function ServicesPage() {
                   {/* CTA Button */}
                   <Link 
                     href="/appointments"
-                    className="block w-full py-3 px-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-colors text-center"
+                    className="btn-copper"
+                    style={{ width: "100%", justifyContent: "center" }}
                   >
                     Book Appointment
                   </Link>
@@ -128,47 +130,47 @@ export default function ServicesPage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our Services?
+      <section style={{ padding: "100px 72px", background: "var(--sage-tint)" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "64px" }} className="reveal is-visible">
+            <h2 className="display-heading philosophy-heading">
+              Why Choose <em>Our Services?</em>
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="p-6 bg-white rounded-xl border border-gray-200">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px" }}>
+            <div className="reveal is-visible" style={{ padding: "36px", background: "var(--white)", borderRadius: "4px", border: "1px solid var(--border)" }}>
+              <h3 className="pillar-title" style={{ fontSize: "20px", display: "flex", alignItems: "center", gap: "12px" }}>
                 <span>👨‍⚕️</span> Expert Consultation
               </h3>
-              <p className="text-gray-600">
+              <p className="philosophy-desc">
                 Personalized treatment plans designed by experienced dermatologists based on your specific skin condition and goals.
               </p>
             </div>
 
-            <div className="p-6 bg-white rounded-xl border border-gray-200">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
+            <div className="reveal is-visible" style={{ padding: "36px", background: "var(--white)", borderRadius: "4px", border: "1px solid var(--border)" }}>
+              <h3 className="pillar-title" style={{ fontSize: "20px", display: "flex", alignItems: "center", gap: "12px" }}>
                 <span>🏥</span> Advanced Technology
               </h3>
-              <p className="text-gray-600">
+              <p className="philosophy-desc">
                 State-of-the-art equipment and cutting-edge techniques for safe, effective and quick results.
               </p>
             </div>
 
-            <div className="p-6 bg-white rounded-xl border border-gray-200">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
+            <div className="reveal is-visible" style={{ padding: "36px", background: "var(--white)", borderRadius: "4px", border: "1px solid var(--border)" }}>
+              <h3 className="pillar-title" style={{ fontSize: "20px", display: "flex", alignItems: "center", gap: "12px" }}>
                 <span>✨</span> Quality Results
               </h3>
-              <p className="text-gray-600">
+              <p className="philosophy-desc">
                 Proven track record of delivering visible improvements and transformations with natural-looking results.
               </p>
             </div>
 
-            <div className="p-6 bg-white rounded-xl border border-gray-200">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
+            <div className="reveal is-visible" style={{ padding: "36px", background: "var(--white)", borderRadius: "4px", border: "1px solid var(--border)" }}>
+              <h3 className="pillar-title" style={{ fontSize: "20px", display: "flex", alignItems: "center", gap: "12px" }}>
                 <span>❤️</span> Patient Care
               </h3>
-              <p className="text-gray-600">
+              <p className="philosophy-desc">
                 Compassionate care with attention to your comfort, concerns, and complete satisfaction throughout your treatment.
               </p>
             </div>
@@ -177,17 +179,18 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-teal-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+      <section style={{ padding: "100px 72px", background: "var(--forest)", textAlign: "center" }}>
+        <div style={{ maxWidth: "800px", margin: "0 auto" }} className="reveal is-visible">
+          <h2 className="display-heading cta-heading" style={{ justifyContent: "center" }}>
             Ready to Transform Your Skin?
           </h2>
-          <p className="text-xl text-teal-50 mb-8">
+          <p className="cta-sub" style={{ marginBottom: "32px", fontSize: "18px" }}>
             Schedule your consultation today and take the first step toward healthier, radiant skin.
           </p>
           <Link 
             href="/appointments"
-            className="inline-block px-8 py-4 bg-white text-teal-600 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg"
+            className="btn-copper"
+            style={{ fontSize: "16px", padding: "18px 36px" }}
           >
             Book Your Appointment Now
           </Link>

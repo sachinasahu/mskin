@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -90,52 +91,58 @@ export default function GalleryPage() {
       : conditions.filter((c) => c.category === selectedCategory);
 
   return (
-    <div className="min-h-screen">
+    <div style={{ background: "var(--pearl)", minHeight: "100vh", paddingTop: "120px" }}>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-zinc-950 dark:to-emerald-950 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-zinc-900 dark:text-white mb-6">
-              Skin Conditions <span className="text-emerald-600 dark:text-emerald-500">Gallery</span>
+      <section style={{ padding: "0 72px 40px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "40px" }} className="reveal is-visible">
+            <span className="eyebrow" style={{ justifyContent: "center" }}>Educational Reference</span>
+            <h1 className="display-heading philosophy-heading">
+              Skin Conditions <em style={{ color: "var(--copper)" }}>Gallery</em>
             </h1>
-            <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl mx-auto">
-              Educational reference for common dermatological conditions, symptoms, and treatments
+            <p className="philosophy-desc" style={{ maxWidth: "600px", margin: "0 auto" }}>
+              Educational reference for common dermatological conditions, symptoms, and treatments.
             </p>
           </div>
         </div>
       </section>
 
       {/* Important Notice */}
-      <section className="py-8 bg-amber-50 dark:bg-amber-900/20 border-y border-amber-200 dark:border-amber-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-start gap-3">
-            <span className="text-2xl">⚠️</span>
-            <div>
-              <h3 className="font-semibold text-amber-900 dark:text-amber-300 mb-1">
-                Medical Disclaimer
-              </h3>
-              <p className="text-sm text-amber-800 dark:text-amber-400">
-                This gallery is for educational purposes only. If you notice any unusual changes in your skin, 
-                please consult a board-certified dermatologist for proper diagnosis and treatment.
-              </p>
-            </div>
+      <section style={{ padding: "32px 72px", background: "var(--sage-tint)", borderBottom: "1px solid var(--border)", borderTop: "1px solid var(--border)" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", gap: "16px", alignItems: "flex-start" }}>
+          <span style={{ fontSize: "24px" }}>⚠️</span>
+          <div>
+            <h3 className="pillar-title" style={{ fontSize: "18px", marginBottom: "8px", color: "var(--forest-mid)" }}>
+              Medical Disclaimer
+            </h3>
+            <p className="philosophy-desc" style={{ fontSize: "14px", color: "var(--smoke)", margin: 0 }}>
+              This gallery is for educational purposes only. If you notice any unusual changes in your skin, 
+              please consult a board-certified dermatologist for proper diagnosis and treatment.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-3 justify-center">
+      <section style={{ padding: "32px 72px", background: "var(--white)", borderBottom: "1px solid var(--border)" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", justifyContent: "center" }}>
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-6 py-2 rounded-full font-medium transition-all ${
-                  selectedCategory === cat
-                    ? "bg-emerald-600 text-white"
-                    : "bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700"
-                }`}
+                style={{
+                  padding: "10px 24px",
+                  borderRadius: "4px",
+                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  cursor: "pointer",
+                  border: "none",
+                  transition: "all 0.2s",
+                  background: selectedCategory === cat ? "var(--forest)" : "var(--sage-tint)",
+                  color: selectedCategory === cat ? "var(--white)" : "var(--forest-mid)",
+                }}
               >
                 {cat}
               </button>
@@ -145,16 +152,17 @@ export default function GalleryPage() {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-20 bg-zinc-50 dark:bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section style={{ padding: "80px 72px", background: "var(--pearl)" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "40px" }}>
             {filteredConditions.map((condition, idx) => (
               <div
                 key={idx}
-                className="bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 hover:shadow-xl transition-shadow"
+                className="reveal is-visible"
+                style={{ background: "var(--white)", borderRadius: "4px", overflow: "hidden", border: "1px solid var(--border)", display: "flex", flexDirection: "column" }}
               >
                 {/* Image */}
-                <div className="relative h-64">
+                <div style={{ position: "relative", height: "240px", background: "var(--sage-tint)", overflow: "hidden" }}>
                   <Image
                     src={imageMap[condition.category] || "/images/gallery/other.svg"}
                     alt={`${condition.name} illustrative image`}
@@ -164,46 +172,46 @@ export default function GalleryPage() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-4">
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
+                <div style={{ padding: "32px", display: "flex", flexDirection: "column", flexGrow: 1 }}>
+                  <div style={{ marginBottom: "24px" }}>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px" }}>
+                      <h3 className="pillar-title" style={{ fontSize: "20px", marginBottom: 0 }}>
                         {condition.name}
                       </h3>
-                      <span className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 rounded-full text-xs font-medium">
+                      <span style={{ padding: "4px 12px", background: "var(--sage-tint)", color: "var(--forest)", borderRadius: "3px", fontSize: "11px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "1px" }}>
                         {condition.category}
                       </span>
                     </div>
-                    <p className="text-sm text-zinc-500 dark:text-zinc-500 mb-3">
+                    <p style={{ fontSize: "13px", color: "var(--mist)", marginBottom: "12px", fontFamily: "var(--font-space), sans-serif", textTransform: "uppercase", letterSpacing: "1px" }}>
                       Severity: {condition.severity}
                     </p>
-                    <p className="text-zinc-600 dark:text-zinc-400 text-sm">
+                    <p className="philosophy-desc" style={{ fontSize: "14px", lineHeight: 1.6 }}>
                       {condition.description}
                     </p>
                   </div>
 
-                  <div>
-                    <h4 className="font-semibold text-zinc-900 dark:text-white mb-2 text-sm">
+                  <div style={{ marginBottom: "20px" }}>
+                    <h4 style={{ fontSize: "14px", fontWeight: 600, color: "var(--ink)", marginBottom: "8px" }}>
                       Common Symptoms:
                     </h4>
-                    <ul className="space-y-1">
+                    <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "6px" }}>
                       {condition.symptoms.map((symptom, i) => (
-                        <li key={i} className="text-sm text-zinc-600 dark:text-zinc-400 flex items-start">
-                          <span className="text-emerald-600 mr-2">•</span>
+                        <li key={i} style={{ fontSize: "13.5px", color: "var(--smoke)", display: "flex", alignItems: "flex-start" }}>
+                          <span style={{ color: "var(--copper)", marginRight: "8px" }}>•</span>
                           {symptom}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div>
-                    <h4 className="font-semibold text-zinc-900 dark:text-white mb-2 text-sm">
+                  <div style={{ flexGrow: 1 }}>
+                    <h4 style={{ fontSize: "14px", fontWeight: 600, color: "var(--ink)", marginBottom: "8px" }}>
                       Treatment Options:
                     </h4>
-                    <ul className="space-y-1">
+                    <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "6px" }}>
                       {condition.treatment.map((treat, i) => (
-                        <li key={i} className="text-sm text-zinc-600 dark:text-zinc-400 flex items-start">
-                          <span className="text-blue-600 mr-2">✓</span>
+                        <li key={i} style={{ fontSize: "13.5px", color: "var(--smoke)", display: "flex", alignItems: "flex-start" }}>
+                          <span style={{ color: "var(--forest)", marginRight: "8px", fontWeight: "bold" }}>✓</span>
                           {treat}
                         </li>
                       ))}
@@ -217,20 +225,21 @@ export default function GalleryPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-emerald-600 dark:bg-emerald-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+      <section style={{ padding: "100px 72px", background: "var(--forest)", textAlign: "center" }}>
+        <div style={{ maxWidth: "800px", margin: "0 auto" }} className="reveal is-visible">
+          <h2 className="display-heading cta-heading" style={{ justifyContent: "center" }}>
             Concerned About Your Skin?
           </h2>
-          <p className="text-emerald-100 mb-8 text-lg">
-            Schedule a consultation with our expert dermatologist for personalized care
+          <p className="cta-sub" style={{ marginBottom: "32px", fontSize: "18px" }}>
+            Schedule a consultation with our expert dermatologist for personalized care.
           </p>
-          <a
-            href="/contact"
-            className="inline-block px-8 py-4 bg-white text-emerald-600 rounded-full font-semibold hover:bg-zinc-100 transition-all"
+          <Link 
+            href="/appointments"
+            className="btn-copper"
+            style={{ fontSize: "16px", padding: "18px 36px" }}
           >
             Book Appointment
-          </a>
+          </Link>
         </div>
       </section>
     </div>

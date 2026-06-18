@@ -1,65 +1,138 @@
 import Link from "next/link";
+import { FaWhatsapp, FaCheckCircle } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="pt-32 pb-20 bg-linear-to-br from-blue-50 via-white to-teal-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative pt-32 pb-20 bg-gradient-to-br from-emerald-50 via-white to-blue-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-emerald-950 overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-200 dark:bg-emerald-900/30 rounded-full blur-3xl opacity-20 -mr-48 -mt-48"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-200 dark:bg-blue-900/30 rounded-full blur-3xl opacity-20 -ml-40 -mb-40"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
+            {/* Main Headline */}
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-4">
-                Dr Manoj&apos;s Skin & Hair Clinic
+              <div className="inline-block mb-4 px-4 py-2 bg-emerald-100 dark:bg-emerald-900/30 rounded-full">
+                <p className="text-emerald-700 dark:text-emerald-400 text-sm font-semibold">
+                  Welcome to Expert Dermatology Care
+                </p>
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold text-zinc-900 dark:text-white leading-tight mb-6 tracking-tight">
+                Transform Your{" "}
+                <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                  Skin
+                </span>
+                , Transform Your{" "}
+                <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                  Confidence
+                </span>
               </h1>
-              <p className="text-2xl text-gray-700 font-medium">
-                Advanced dermatology, hair restoration & skin rejuvenation in Bhubaneswar
+              <p className="text-xl text-zinc-600 dark:text-zinc-300 font-medium leading-relaxed max-w-xl">
+                Experience professional dermatology care with Dr. Manoj's
+                state-of-the-art clinic. Specializing in advanced skin
+                treatments, hair restoration, and rejuvenation services.
               </p>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/appointments" className="px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white rounded-lg font-bold text-lg transition-all flex items-center justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Link
+                href="/appointments"
+                className="group px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white rounded-xl font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 7V3m8 4V3m-9 8h18M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
                 Book Appointment
               </Link>
-              <a 
-                href="https://wa.me/917657015719" 
-                target="_blank" 
+              <a
+                href="https://wa.me/917657015719"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-lg font-bold text-lg transition-all flex items-center justify-center gap-2"
+                className="group px-8 py-4 bg-white dark:bg-zinc-800 border-2 border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-xl font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-whatsapp" viewBox="0 0 16 16">
-  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-</svg>
-                Contact us on WhatsApp
+                <FaWhatsapp className="w-5 h-5" />
+                <span className="hidden sm:inline">Chat on WhatsApp</span>
+                <span className="sm:hidden">WhatsApp</span>
               </a>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-8 pt-8 border-t border-gray-200">
-              <div>
-                <div className="text-4xl font-bold text-teal-600">10+</div>
-                <p className="text-gray-600 font-medium">Years Experience</p>
+            {/* Trust Indicators */}
+            <div className="grid grid-cols-2 gap-6 pt-8 border-t border-zinc-200 dark:border-zinc-700">
+              <div className="group">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
+                    10+
+                  </div>
+                </div>
+                <p className="text-zinc-600 dark:text-zinc-400 font-medium">
+                  Years of Excellence
+                </p>
               </div>
-              <div>
-                <div className="text-4xl font-bold text-teal-600">5000+</div>
-                <p className="text-gray-600 font-medium">Happy Patients</p>
+              <div className="group">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
+                    5000+
+                  </div>
+                </div>
+                <p className="text-zinc-600 dark:text-zinc-400 font-medium">
+                  Happy Patients
+                </p>
               </div>
-              <div>
-                <div className="text-4xl font-bold text-teal-600">✓</div>
-                <p className="text-gray-600 font-medium">Govt. Approved Clinic</p>
+              <div className="group flex items-center gap-3">
+                <FaCheckCircle className="text-emerald-600 dark:text-emerald-400 text-2xl" />
+                <p className="text-zinc-600 dark:text-zinc-400 font-medium">
+                  Govt. Approved
+                </p>
               </div>
-              <div>
-                <div className="text-4xl font-bold text-teal-600">ISO</div>
-                <p className="text-gray-600 font-medium">Certified</p>
+              <div className="group flex items-center gap-3">
+                <FaCheckCircle className="text-emerald-600 dark:text-emerald-400 text-2xl" />
+                <p className="text-zinc-600 dark:text-zinc-400 font-medium">
+                  ISO Certified
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Right Image */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-linear-to-br from-teal-400 to-blue-400 rounded-3xl blur-3xl opacity-20"></div>
-            <div className="relative rounded-3xl overflow-hidden h-full min-h-96 border-4 border-white shadow-xl">
-              <img src="/images/doPic.jpg" alt="Dr. Manoj Kumar Nayak - Professional Dermatologist" className="w-full h-full object-cover" />
+          {/* Right Image Section */}
+          <div className="relative hidden md:block">
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-blue-400 dark:from-emerald-600 dark:to-blue-600 rounded-3xl blur-2xl opacity-30 transform -rotate-6"></div>
+            <div className="relative rounded-3xl overflow-hidden h-full min-h-96 shadow-2xl border-2 border-white/20 dark:border-zinc-700/50">
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20"></div>
+              <img
+                src="/images/doPic.jpg"
+                alt="Dr. Manoj Kumar Nayak - Professional Dermatologist at Dr Manoj's Skin Clinic"
+                className="w-full h-full object-cover"
+              />
+
+              {/* Floating Badge */}
+              <div className="absolute bottom-6 left-6 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-white/20">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-full flex items-center justify-center">
+                    <FaCheckCircle className="text-white text-lg" />
+                  </div>
+                  <div>
+                    <p className="text-zinc-900 dark:text-white font-bold text-sm">
+                      Certified Expert
+                    </p>
+                    <p className="text-zinc-600 dark:text-zinc-400 text-xs">
+                      Dermatology & Hair Care
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

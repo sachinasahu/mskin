@@ -1,46 +1,34 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, DM_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const cormorant = Cormorant_Garamond({
+  weight: ["400", "500", "600"],
   subsets: ["latin"],
+  variable: "--font-cormorant",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmSans = DM_Sans({
+  weight: ["300", "400", "500", "600"],
   subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+  variable: "--font-space",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Dr Manoj's Skin & Hair Clinic | Best Dermatologist in Bhubaneswar",
+  title: "Dr. Manoj's Skin & Hair Clinic | Best Dermatologist in Bhubaneswar",
   description:
-    "Dr Manoj's Skin & Hair Clinic offers advanced dermatology, hair restoration, laser treatments, and cosmetic skin care in Bhubaneswar. Book your consultation now.",
-  keywords: [
-    "dermatologist bhubaneswar",
-    "skin clinic bhubaneswar",
-    "hair clinic bhubaneswar",
-    "acne treatment",
-    "laser hair removal",
-    "skin rejuvenation",
-    "prp hair treatment",
-  ],
-  openGraph: {
-    title: "Dr Manoj's Skin & Hair Clinic | Bhubaneswar Dermatology",
-    description:
-      "Advanced dermatology, laser, and hair treatments in Bhubaneswar. Personalized care from Dr Manoj Kumar Nayak.",
-    type: "website",
-    locale: "en_US",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  icons: {
-    icon: "/clinic-logo.jpeg",
-  },
+    "Advanced dermatology, hair restoration, laser treatments, and cosmetic skin care in Bhubaneswar. Book your consultation now.",
 };
 
 export default function RootLayout({
@@ -49,46 +37,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white`}
-      >
-        <script
-          type="application/ld+json"
-          suppressHydrationWarning
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalClinic",
-              name: "Dr Manoj's Skin & Hair Clinic",
-              medicalSpecialty: "Dermatology",
-              url: process.env.NEXT_PUBLIC_SITE_URL || "https://msclinic.com",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress:
-                  "Unit 4, Madhusudan Nagar, Near Truptee Restaurant, Old Ag Colony",
-                addressLocality: "Bhubaneswar",
-                addressRegion: "Odisha",
-                postalCode: "751001",
-                addressCountry: "IN",
-              },
-              contactPoint: {
-                "@type": "ContactPoint",
-                telephone: "+91-8050719779",
-                contactType: "customer service",
-              },
-              employee: {
-                "@type": "Physician",
-                name: "Dr. Manoj Kumar Nayak",
-                medicalSpecialty: "Dermatology",
-                description:
-                  "MBBS, MD (Skin & VD). AIIMS Rishikesh; Ex-Senior Resident, AIIMS Bhubaneswar",
-              },
-            }),
-          }}
-        />
+    <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${spaceGrotesk.variable}`}>
+      <body>
         <Navbar />
-        <main className="pt-16">
+        <main>
           {children}
         </main>
         <Footer />
