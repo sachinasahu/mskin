@@ -85,7 +85,7 @@ export default function Services() {
 
   return (
     <section className="py-20 bg-gradient-to-br from-white via-emerald-50/30 to-white dark:from-zinc-900 dark:via-emerald-900/10 dark:to-zinc-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4 px-4 py-2 bg-emerald-100 dark:bg-emerald-900/30 rounded-full">

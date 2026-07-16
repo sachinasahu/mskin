@@ -29,7 +29,7 @@ export async function GET() {
       },
       result,
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Email test error:", error);
     return NextResponse.json({
       success: false,

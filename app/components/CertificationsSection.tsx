@@ -37,7 +37,7 @@ export default function CertificationsSection() {
 
   return (
     <section className="py-20 bg-white dark:bg-zinc-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container">
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 rounded-full text-sm font-semibold mb-4">

@@ -240,7 +240,7 @@ async function sendDefaultResponse(to: string) {
 /**
  * Send WhatsApp message via Meta API
  */
-async function sendWhatsAppMessage(payload: any) {
+async function sendWhatsAppMessage(payload: unknown) {
   const phoneNumberId = process.env.WHATSAPP_PHONE_NUMBER_ID;
   const token = process.env.WHATSAPP_TOKEN;
 
@@ -330,7 +330,7 @@ async function markAsRead(messageId: string) {
 WHATSAPP_BUSINESS_ACCOUNT_ID=xxxxxxxxxxxx
 WHATSAPP_PHONE_NUMBER_ID=xxxxxxxxxxxx
 WHATSAPP_TOKEN=your_long_token_here
-WHATSAPP_VERIFY_TOKEN=any_random_string_you_choose
+WHATSAPP_VERIFY_TOKEN=unknown_random_string_you_choose
 
 Steps to get these:
 1. Go to https://developers.facebook.com
@@ -339,5 +339,5 @@ Steps to get these:
 4. Get Phone Number ID from your phone number
 5. Generate Access Token
 6. Set webhook URL to: https://yoursite.com/api/whatsapp
-7. Set Verify Token to any random string (you define it)
+7. Set Verify Token to unknown random string (you define it)
 */

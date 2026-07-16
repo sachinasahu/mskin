@@ -7,72 +7,159 @@ import Link from "next/link";
 export default function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "Acne", "Eczema", "Psoriasis", "Rosacea", "Skin Cancer", "Other"];
+  const categories = [
+    "All",
+    "Acne",
+    "Eczema",
+    "Psoriasis",
+    "Rosacea",
+    "Skin Cancer",
+    "Other",
+  ];
 
   const conditions = [
     {
       name: "Acne Vulgaris",
       category: "Acne",
       severity: "Moderate",
-      description: "Common inflammatory skin condition affecting hair follicles and sebaceous glands, characterized by comedones, papules, pustules, and sometimes nodules.",
+      description:
+        "Common inflammatory skin condition affecting hair follicles and sebaceous glands, characterized by comedones, papules, pustules, and sometimes nodules.",
       symptoms: ["Blackheads", "Whiteheads", "Inflamed bumps", "Scarring"],
-      treatment: ["Topical retinoids", "Benzoyl peroxide", "Antibiotics", "Isotretinoin for severe cases"],
+      treatment: [
+        "Topical retinoids",
+        "Benzoyl peroxide",
+        "Antibiotics",
+        "Isotretinoin for severe cases",
+      ],
     },
     {
       name: "Atopic Dermatitis (Eczema)",
       category: "Eczema",
       severity: "Mild to Severe",
-      description: "Chronic inflammatory skin condition causing red, itchy, and dry patches, often appearing in flexural areas.",
-      symptoms: ["Intense itching", "Red patches", "Dry, scaly skin", "Thickened skin"],
-      treatment: ["Moisturizers", "Topical corticosteroids", "Immunomodulators", "Avoiding triggers"],
+      description:
+        "Chronic inflammatory skin condition causing red, itchy, and dry patches, often appearing in flexural areas.",
+      symptoms: [
+        "Intense itching",
+        "Red patches",
+        "Dry, scaly skin",
+        "Thickened skin",
+      ],
+      treatment: [
+        "Moisturizers",
+        "Topical corticosteroids",
+        "Immunomodulators",
+        "Avoiding triggers",
+      ],
     },
     {
       name: "Plaque Psoriasis",
       category: "Psoriasis",
       severity: "Chronic",
-      description: "Autoimmune condition causing rapid skin cell buildup, resulting in thick, scaly plaques with silvery-white scales.",
-      symptoms: ["Red patches with scales", "Dry, cracked skin", "Itching or burning", "Nail changes"],
-      treatment: ["Topical treatments", "Phototherapy", "Systemic medications", "Biologics"],
+      description:
+        "Autoimmune condition causing rapid skin cell buildup, resulting in thick, scaly plaques with silvery-white scales.",
+      symptoms: [
+        "Red patches with scales",
+        "Dry, cracked skin",
+        "Itching or burning",
+        "Nail changes",
+      ],
+      treatment: [
+        "Topical treatments",
+        "Phototherapy",
+        "Systemic medications",
+        "Biologics",
+      ],
     },
     {
       name: "Rosacea",
       category: "Rosacea",
       severity: "Chronic",
-      description: "Chronic inflammatory condition primarily affecting facial skin, causing redness, visible blood vessels, and sometimes acne-like bumps.",
-      symptoms: ["Facial redness", "Visible blood vessels", "Bumps and pimples", "Eye irritation"],
-      treatment: ["Topical metronidazole", "Oral antibiotics", "Laser therapy", "Trigger avoidance"],
+      description:
+        "Chronic inflammatory condition primarily affecting facial skin, causing redness, visible blood vessels, and sometimes acne-like bumps.",
+      symptoms: [
+        "Facial redness",
+        "Visible blood vessels",
+        "Bumps and pimples",
+        "Eye irritation",
+      ],
+      treatment: [
+        "Topical metronidazole",
+        "Oral antibiotics",
+        "Laser therapy",
+        "Trigger avoidance",
+      ],
     },
     {
       name: "Basal Cell Carcinoma",
       category: "Skin Cancer",
       severity: "Serious",
-      description: "Most common type of skin cancer, typically appearing as a pearly or waxy bump, often on sun-exposed areas.",
-      symptoms: ["Pearly bump", "Flat, flesh-colored lesion", "Bleeding or scabbing", "Slow growth"],
-      treatment: ["Surgical excision", "Mohs surgery", "Radiation", "Topical treatments"],
+      description:
+        "Most common type of skin cancer, typically appearing as a pearly or waxy bump, often on sun-exposed areas.",
+      symptoms: [
+        "Pearly bump",
+        "Flat, flesh-colored lesion",
+        "Bleeding or scabbing",
+        "Slow growth",
+      ],
+      treatment: [
+        "Surgical excision",
+        "Mohs surgery",
+        "Radiation",
+        "Topical treatments",
+      ],
     },
     {
       name: "Melanoma",
       category: "Skin Cancer",
       severity: "Critical",
-      description: "Most dangerous form of skin cancer developing in melanocytes. Early detection is crucial for successful treatment.",
-      symptoms: ["Asymmetrical mole", "Irregular borders", "Multiple colors", "Diameter > 6mm", "Evolving appearance"],
-      treatment: ["Surgical removal", "Immunotherapy", "Targeted therapy", "Chemotherapy"],
+      description:
+        "Most dangerous form of skin cancer developing in melanocytes. Early detection is crucial for successful treatment.",
+      symptoms: [
+        "Asymmetrical mole",
+        "Irregular borders",
+        "Multiple colors",
+        "Diameter > 6mm",
+        "Evolving appearance",
+      ],
+      treatment: [
+        "Surgical removal",
+        "Immunotherapy",
+        "Targeted therapy",
+        "Chemotherapy",
+      ],
     },
     {
       name: "Vitiligo",
       category: "Other",
       severity: "Chronic",
-      description: "Autoimmune condition causing loss of skin pigmentation in patches due to destruction of melanocytes.",
-      symptoms: ["White patches", "Premature graying", "Loss of color in mouth", "Symmetrical patterns"],
-      treatment: ["Topical corticosteroids", "Phototherapy", "Skin grafting", "Depigmentation"],
+      description:
+        "Autoimmune condition causing loss of skin pigmentation in patches due to destruction of melanocytes.",
+      symptoms: [
+        "White patches",
+        "Premature graying",
+        "Loss of color in mouth",
+        "Symmetrical patterns",
+      ],
+      treatment: [
+        "Topical corticosteroids",
+        "Phototherapy",
+        "Skin grafting",
+        "Depigmentation",
+      ],
     },
     {
       name: "Seborrheic Dermatitis",
       category: "Other",
       severity: "Mild",
-      description: "Common inflammatory condition affecting oily areas of the body, causing scaly, flaky, itchy red skin.",
+      description:
+        "Common inflammatory condition affecting oily areas of the body, causing scaly, flaky, itchy red skin.",
       symptoms: ["Scaly patches", "Red skin", "Dandruff", "Itching"],
-      treatment: ["Medicated shampoos", "Antifungal creams", "Corticosteroids", "Light therapy"],
+      treatment: [
+        "Medicated shampoos",
+        "Antifungal creams",
+        "Corticosteroids",
+        "Light therapy",
+      ],
     },
   ];
 
@@ -91,80 +178,82 @@ export default function GalleryPage() {
       : conditions.filter((c) => c.category === selectedCategory);
 
   return (
-    <div style={{ background: "var(--pearl)", minHeight: "100vh", paddingTop: "120px" }}>
+    <div className="gallery-page min-h-screen bg-[var(--pearl)]">
       {/* Hero Section */}
-      <section style={{ padding: "0 72px 40px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: "40px" }} className="reveal is-visible">
-            <span className="eyebrow" style={{ justifyContent: "center" }}>Educational Reference</span>
+      <section className="px-4 pb-9 pt-9 sm:px-6 sm:pb-9 sm:pt-9 lg:px-8 lg:pb-10 lg:pt-0">
+        <div className="container">
+          <div className="reveal is-visible mb-9 text-center sm:mb-10">
+            <span className="eyebrow justify-center">
+              Educational Reference
+            </span>
             <h1 className="display-heading philosophy-heading">
-              Skin Conditions <em style={{ color: "var(--copper)" }}>Gallery</em>
+              Skin Conditions <em className="text-[var(--copper)]">Gallery</em>
             </h1>
-            <p className="philosophy-desc" style={{ maxWidth: "600px", margin: "0 auto" }}>
-              Educational reference for common dermatological conditions, symptoms, and treatments.
+            <p className="philosophy-desc mx-auto max-w-[600px]">
+              Educational reference for common dermatological conditions,
+              symptoms, and treatments.
             </p>
           </div>
         </div>
       </section>
 
       {/* Important Notice */}
-      <section style={{ padding: "32px 72px", background: "var(--sage-tint)", borderBottom: "1px solid var(--border)", borderTop: "1px solid var(--border)" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", gap: "16px", alignItems: "flex-start" }}>
-          <span style={{ fontSize: "24px" }}>⚠️</span>
+      <section className="border-y border-[var(--border)] bg-[var(--sage-tint)] px-4 py-[52px] sm:px-6 sm:py-[52px] lg:px-8 lg:py-8">
+        <div className="container flex items-start gap-4">
+          <span className="text-2xl">⚠️</span>
           <div>
-            <h3 className="pillar-title" style={{ fontSize: "18px", marginBottom: "8px", color: "var(--forest-mid)" }}>
+            <h3 className="pillar-title mb-2 text-lg text-[var(--forest-mid)]">
               Medical Disclaimer
             </h3>
-            <p className="philosophy-desc" style={{ fontSize: "14px", color: "var(--smoke)", margin: 0 }}>
-              This gallery is for educational purposes only. If you notice any unusual changes in your skin, 
-              please consult a board-certified dermatologist for proper diagnosis and treatment.
+            <p className="philosophy-desc m-0 text-sm text-[var(--smoke)]">
+              This gallery is for educational purposes only. If you notice any
+              unusual changes in your skin, please consult a board-certified
+              dermatologist for proper diagnosis and treatment.
             </p>
           </div>
         </div>
       </section>
 
       {/* Category Filter */}
-      <section style={{ padding: "32px 72px", background: "var(--white)", borderBottom: "1px solid var(--border)" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", justifyContent: "center" }}>
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                style={{
-                  padding: "10px 24px",
-                  borderRadius: "4px",
-                  fontFamily: "var(--font-dm-sans), sans-serif",
-                  fontSize: "14px",
-                  fontWeight: 500,
-                  cursor: "pointer",
-                  border: "none",
-                  transition: "all 0.2s",
-                  background: selectedCategory === cat ? "var(--forest)" : "var(--sage-tint)",
-                  color: selectedCategory === cat ? "var(--white)" : "var(--forest-mid)",
-                }}
-              >
-                {cat}
-              </button>
-            ))}
+      <section className="border-b border-[var(--border)] bg-[var(--white)] px-4 py-[52px] sm:px-6 sm:py-[52px] lg:px-8 lg:py-8">
+        <div className="container">
+          <div className="flex flex-wrap justify-center gap-3">
+            {categories.map((cat) => {
+              const isActive = selectedCategory === cat;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`rounded-[4px] border-none px-6 py-2.5 font-[var(--font-dm-sans)] text-sm font-medium transition-all duration-200 ${
+                    isActive
+                      ? "bg-[var(--forest)] text-[var(--white)]"
+                      : "bg-[var(--sage-tint)] text-[var(--forest-mid)]"
+                  }`}
+                >
+                  {cat}
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Gallery Grid */}
-      <section style={{ padding: "80px 72px", background: "var(--pearl)" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "40px" }}>
+      <section className="bg-[var(--pearl)] px-4 py-[52px] sm:px-6 sm:py-[52px] lg:px-8 lg:py-20">
+        <div className="container">
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-10">
             {filteredConditions.map((condition, idx) => (
               <div
                 key={idx}
-                className="reveal is-visible"
-                style={{ background: "var(--white)", borderRadius: "4px", overflow: "hidden", border: "1px solid var(--border)", display: "flex", flexDirection: "column" }}
+                className="reveal is-visible flex flex-col overflow-hidden rounded-[4px] border border-[var(--border)] bg-[var(--white)]"
               >
                 {/* Image */}
-                <div style={{ position: "relative", height: "240px", background: "var(--sage-tint)", overflow: "hidden" }}>
+                <div className="relative h-[220px] overflow-hidden bg-[var(--sage-tint)] sm:h-60">
                   <Image
-                    src={imageMap[condition.category] || "/images/gallery/other.svg"}
+                    src={
+                      imageMap[condition.category] ||
+                      "/images/gallery/other.svg"
+                    }
                     alt={`${condition.name} illustrative image`}
                     fill
                     className="object-cover"
@@ -172,46 +261,54 @@ export default function GalleryPage() {
                 </div>
 
                 {/* Content */}
-                <div style={{ padding: "32px", display: "flex", flexDirection: "column", flexGrow: 1 }}>
-                  <div style={{ marginBottom: "24px" }}>
-                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px" }}>
-                      <h3 className="pillar-title" style={{ fontSize: "20px", marginBottom: 0 }}>
+                <div className="flex flex-grow flex-col p-6 sm:p-8">
+                  <div className="mb-6">
+                    <div className="mb-2 flex items-center justify-between gap-3">
+                      <h3 className="pillar-title mb-0 text-xl">
                         {condition.name}
                       </h3>
-                      <span style={{ padding: "4px 12px", background: "var(--sage-tint)", color: "var(--forest)", borderRadius: "3px", fontSize: "11px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "1px" }}>
+                      <span className="whitespace-nowrap rounded-[3px] bg-[var(--sage-tint)] px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-[var(--forest)]">
                         {condition.category}
                       </span>
                     </div>
-                    <p style={{ fontSize: "13px", color: "var(--mist)", marginBottom: "12px", fontFamily: "var(--font-space), sans-serif", textTransform: "uppercase", letterSpacing: "1px" }}>
+                    <p className="mb-3 font-[var(--font-space)] text-[13px] uppercase tracking-wider text-[var(--mist)]">
                       Severity: {condition.severity}
                     </p>
-                    <p className="philosophy-desc" style={{ fontSize: "14px", lineHeight: 1.6 }}>
+                    <p className="philosophy-desc text-sm leading-[1.6]">
                       {condition.description}
                     </p>
                   </div>
 
-                  <div style={{ marginBottom: "20px" }}>
-                    <h4 style={{ fontSize: "14px", fontWeight: 600, color: "var(--ink)", marginBottom: "8px" }}>
+                  <div className="mb-5">
+                    <h4 className="mb-2 text-sm font-semibold text-[var(--ink)]">
                       Common Symptoms:
                     </h4>
-                    <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "6px" }}>
+                    <ul className="m-0 flex list-none flex-col gap-1.5 p-0">
                       {condition.symptoms.map((symptom, i) => (
-                        <li key={i} style={{ fontSize: "13.5px", color: "var(--smoke)", display: "flex", alignItems: "flex-start" }}>
-                          <span style={{ color: "var(--copper)", marginRight: "8px" }}>•</span>
+                        <li
+                          key={i}
+                          className="flex items-start text-[13.5px] text-[var(--smoke)]"
+                        >
+                          <span className="mr-2 text-[var(--copper)]">•</span>
                           {symptom}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div style={{ flexGrow: 1 }}>
-                    <h4 style={{ fontSize: "14px", fontWeight: 600, color: "var(--ink)", marginBottom: "8px" }}>
+                  <div className="flex-grow">
+                    <h4 className="mb-2 text-sm font-semibold text-[var(--ink)]">
                       Treatment Options:
                     </h4>
-                    <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "6px" }}>
+                    <ul className="m-0 flex list-none flex-col gap-1.5 p-0">
                       {condition.treatment.map((treat, i) => (
-                        <li key={i} style={{ fontSize: "13.5px", color: "var(--smoke)", display: "flex", alignItems: "flex-start" }}>
-                          <span style={{ color: "var(--forest)", marginRight: "8px", fontWeight: "bold" }}>✓</span>
+                        <li
+                          key={i}
+                          className="flex items-start text-[13.5px] text-[var(--smoke)]"
+                        >
+                          <span className="mr-2 font-bold text-[var(--forest)]">
+                            ✓
+                          </span>
                           {treat}
                         </li>
                       ))}
@@ -225,18 +322,18 @@ export default function GalleryPage() {
       </section>
 
       {/* CTA Section */}
-      <section style={{ padding: "100px 72px", background: "var(--forest)", textAlign: "center" }}>
-        <div style={{ maxWidth: "800px", margin: "0 auto" }} className="reveal is-visible">
-          <h2 className="display-heading cta-heading" style={{ justifyContent: "center" }}>
+      <section className="bg-[var(--forest)] px-4 py-[52px] text-center sm:px-6 sm:py-[52px] lg:px-8 lg:py-[100px]">
+        <div className="reveal is-visible mx-auto max-w-[800px]">
+          <h2 className="display-heading cta-heading justify-center">
             Concerned About Your Skin?
           </h2>
-          <p className="cta-sub" style={{ marginBottom: "32px", fontSize: "18px" }}>
-            Schedule a consultation with our expert dermatologist for personalized care.
+          <p className="cta-sub mb-8 text-lg">
+            Schedule a consultation with our expert dermatologist for
+            personalized care.
           </p>
-          <Link 
+          <Link
             href="/appointments"
-            className="btn-copper"
-            style={{ fontSize: "16px", padding: "18px 36px" }}
+            className="btn-copper px-9 py-[18px] text-base"
           >
             Book Appointment
           </Link>

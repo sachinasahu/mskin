@@ -41,7 +41,7 @@ export default function DoctorProfile() {
 
   return (
     <section className="py-20 bg-white dark:bg-zinc-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Doctor Image */}
           <div className="relative group order-2 lg:order-1">

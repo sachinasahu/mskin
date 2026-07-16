@@ -4,9 +4,15 @@ export default function SkinCareGuideDetail() {
       title: "Morning Routine",
       icon: "🌅",
       steps: [
-        { step: "Gentle Cleanser", desc: "Remove overnight oils and impurities" },
+        {
+          step: "Gentle Cleanser",
+          desc: "Remove overnight oils and impurities",
+        },
         { step: "Toner", desc: "Balance skin pH and prep for treatment" },
-        { step: "Vitamin C Serum", desc: "Brighten and protect from free radicals" },
+        {
+          step: "Vitamin C Serum",
+          desc: "Brighten and protect from free radicals",
+        },
         { step: "Moisturizer", desc: "Hydrate and lock in active ingredients" },
         { step: "Sunscreen SPF 30+", desc: "Essential UV protection" },
       ],
@@ -71,7 +77,7 @@ export default function SkinCareGuideDetail() {
     <div className="min-h-screen">
       {/* Daily Routines */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Daily Skincare Routines
@@ -83,7 +89,10 @@ export default function SkinCareGuideDetail() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {skinCareRoutines.map((routine, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-8 border border-teal-100">
+              <div
+                key={idx}
+                className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-8 border border-teal-100"
+              >
                 <div className="flex items-center gap-3 mb-6">
                   <span className="text-4xl">{routine.icon}</span>
                   <h3 className="text-2xl font-bold text-gray-900">
@@ -100,9 +109,7 @@ export default function SkinCareGuideDetail() {
                         <h4 className="font-semibold text-gray-900">
                           {item.step}
                         </h4>
-                        <p className="text-sm text-gray-600">
-                          {item.desc}
-                        </p>
+                        <p className="text-sm text-gray-600">{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -115,7 +122,7 @@ export default function SkinCareGuideDetail() {
 
       {/* Skin Type Guides */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Care by Skin Type
@@ -137,8 +144,13 @@ export default function SkinCareGuideDetail() {
                 </h3>
                 <ul className="space-y-2">
                   {skin.tips.map((tip, index) => (
-                    <li key={index} className="flex items-start text-sm text-gray-600">
-                      <span className="text-teal-600 mr-2 flex-shrink-0">✓</span>
+                    <li
+                      key={index}
+                      className="flex items-start text-sm text-gray-600"
+                    >
+                      <span className="text-teal-600 mr-2 flex-shrink-0">
+                        ✓
+                      </span>
                       <span>{tip}</span>
                     </li>
                   ))}
@@ -164,8 +176,9 @@ export default function SkinCareGuideDetail() {
                 <span>🛡️</span> Protection from Environmental Damage
               </h3>
               <p className="text-gray-600">
-                Daily skincare creates a barrier against pollution, UV rays, and free radicals that 
-                accelerate aging and damage skin cells. Consistent protection is your first line of defense.
+                Daily skincare creates a barrier against pollution, UV rays, and
+                free radicals that accelerate aging and damage skin cells.
+                Consistent protection is your first line of defense.
               </p>
             </div>
 
@@ -174,8 +187,9 @@ export default function SkinCareGuideDetail() {
                 <span>💧</span> Moisture Balance & Hydration
               </h3>
               <p className="text-gray-600">
-                Proper hydration maintains skin elasticity, prevents premature wrinkles, and keeps 
-                your complexion glowing. Well-moisturized skin is healthier and more resilient.
+                Proper hydration maintains skin elasticity, prevents premature
+                wrinkles, and keeps your complexion glowing. Well-moisturized
+                skin is healthier and more resilient.
               </p>
             </div>
 
@@ -184,8 +198,9 @@ export default function SkinCareGuideDetail() {
                 <span>🔬</span> Prevention & Early Detection
               </h3>
               <p className="text-gray-600">
-                Regular skincare routines help you notice changes in your skin early, enabling timely 
-                treatment of concerns like acne, discoloration, or unusual growths.
+                Regular skincare routines help you notice changes in your skin
+                early, enabling timely treatment of concerns like acne,
+                discoloration, or unusual growths.
               </p>
             </div>
 
@@ -194,8 +209,9 @@ export default function SkinCareGuideDetail() {
                 <span>✨</span> Confidence & Well-being
               </h3>
               <p className="text-gray-600">
-                Healthy skin boosts self-confidence and overall well-being. A consistent routine is 
-                an act of self-care that benefits both your appearance and mental health.
+                Healthy skin boosts self-confidence and overall well-being. A
+                consistent routine is an act of self-care that benefits both
+                your appearance and mental health.
               </p>
             </div>
           </div>

@@ -40,7 +40,7 @@ export default function TrustIndicators() {
 
   return (
     <section className="py-16 bg-white dark:bg-zinc-900 border-y border-zinc-200 dark:border-zinc-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {indicators.map((item, index) => {
             const Icon = item.icon;
