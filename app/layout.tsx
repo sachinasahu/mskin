@@ -1,49 +1,84 @@
-import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans, Space_Grotesk } from "next/font/google";
-import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import React from "react";
+import type { Metadata, Viewport } from "next";
+import { Plus_Jakarta_Sans, Fraunces } from "next/font/google";
+import "../styles/tailwind.css";
 
-const cormorant = Cormorant_Garamond({
-  weight: ["400", "500", "600"],
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-cormorant",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-plus-jakarta",
   display: "swap",
 });
 
-const dmSans = DM_Sans({
-  weight: ["300", "400", "500", "600"],
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-dm-sans",
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-fraunces",
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
-  weight: ["400", "500", "600"],
-  subsets: ["latin"],
-  variable: "--font-space",
-  display: "swap",
-});
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
-  title: "Dr. Manoj's Skin & Hair Clinic | Best Dermatologist in Bhubaneswar",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+  ),
+  title: "MSkinClinic — Expert Dermatology Care",
   description:
-    "Advanced dermatology, hair restoration, laser treatments, and cosmetic skin care in Bhubaneswar. Book your consultation now.",
+    "MSkinClinic offers expert dermatological treatments by Dr. Manoj — acne, anti-aging, pigmentation, hair loss & cosmetic skin care in India.",
+  keywords: [
+    "dermatologist",
+    "skin clinic",
+    "acne treatment",
+    "skin care",
+    "MSkinClinic",
+    "Dr Manoj",
+    "dermatology",
+  ],
+  openGraph: {
+    title: "MSkinClinic — Expert Dermatology",
+    description:
+      "Board-certified dermatologist with 15+ years. Expert skin treatments for acne, aging, pigmentation & more.",
+    type: "website",
+    images: [{ url: "/assets/images/app_logo.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MSkinClinic — Expert Dermatology",
+    description:
+      "Board-certified dermatologist with 15+ years. Expert skin treatments.",
+    images: ["/assets/images/app_logo.png"],
+  },
+  icons: {
+    icon: [{ url: "/favicon.ico", type: "image/x-icon" }],
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${spaceGrotesk.variable}`}>
-      <body>
-        <Navbar />
-        <main>
-          {children}
-        </main>
-        <Footer />
+    <html
+      lang="en"
+      className={`${plusJakartaSans.variable} ${fraunces.variable}`}
+    >
+      <body className={plusJakartaSans.className}>
+        {children}
+
+        <script
+          type="module"
+          async
+          src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmskinclini6200back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.19"
+        />
+        <script
+          type="module"
+          defer
+          src="https://static.rocket.new/rocket-shot.js?v=0.0.2"
+        />
       </body>
     </html>
   );

@@ -1,13 +1,26 @@
-import { MetadataRoute } from "next";
+import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
-  const now = new Date().toISOString();
-  const routes = ["/", "/about", "/services", "/gallery", "/contact", "/appointments"];
-  return routes.map((path) => ({
-    url: `${base}${path}`,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: path === "/" ? 1.0 : 0.7,
-  }));
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+
+  return [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/appointments`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+  ];
 }

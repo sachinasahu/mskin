@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import AppImage from "@/components/ui/AppImage";
+import AppImage from "../../components/ui/AppImage";
 
 interface Treatment {
   id: string;
@@ -642,7 +642,7 @@ export default function ServicesPage() {
             Not sure which treatment is right for you?
           </h2>
           <p className="text-base text-white/70 leading-relaxed mb-8">
-            Book a free skin consultation with Dr. Meghna Sharma. We'll assess
+            Book a free skin consultation with Dr. Meghna Sharma. We&apos;ll assess
             your skin, understand your goals, and recommend the most effective
             treatment plan.
           </p>
