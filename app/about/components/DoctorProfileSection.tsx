@@ -6,37 +6,41 @@ import AppImage from "@/components/ui/AppImage";
 
 const qualifications = [
   {
-    year: "2009",
-    title: "MBBS — Government Medical College",
-    detail: "Bachelor of Medicine & Surgery",
+    year: "MBBS",
+    title: "Bachelor of Medicine & Surgery",
+    detail: "Medical qualification",
   },
   {
-    year: "2013",
+    year: "MD",
     title: "MD Dermatology — AIIMS",
-    detail: "Doctor of Medicine, Dermatology",
+    detail: "Dermatology specialist training",
   },
   {
-    year: "2014",
-    title: "Fellowship — Advanced Laser Therapy",
-    detail: "International Dermatology Institute",
+    year: "AIIMS",
+    title: "Ex-Senior Resident, AIIMS Bhubaneswar",
+    detail: "Advanced clinical dermatology experience",
   },
   {
-    year: "2016",
-    title: "Certified Aesthetic Practitioner",
-    detail: "Botox, Fillers, Thread Lifts",
+    year: "IMS",
+    title: "Assistant Professor, IMS & SUM Hospital",
+    detail: "Clinical and academic practice",
   },
-  { year: "2020", title: "Established MSkinClinic", detail: "Mumbai, India" },
+  {
+    year: "28352",
+    title: "Medical Registration Number",
+    detail: "Registered dermatologist",
+  },
 ];
 
 const specializations = [
   "Medical Dermatology",
   "Acne & Scar Treatment",
-  "Anti-Aging Procedures",
-  "Laser Skin Resurfacing",
-  "Pigmentation Disorders",
-  "Hair Loss & PRP Therapy",
-  "Cosmetic Dermatology",
-  "Pediatric Dermatology",
+  "Vitiligo, Psoriasis & Eczema",
+  "Laser Skin Treatments",
+  "Pigmentation & Acne Scar Care",
+  "Hair Loss, GFC & PRP Therapy",
+  "Microneedling & Mesotherapy",
+  "Mole, Wart & Tag Removal",
 ];
 
 export default function DoctorProfileSection() {
@@ -75,8 +79,8 @@ export default function DoctorProfileSection() {
               <div className="arch-shape overflow-hidden shadow-teal-lg">
                 <div className="aspect-[3/4]">
                   <AppImage
-                    src="https://img.rocket.new/generatedImages/rocket_gen_img_1ce6ab47d-1780432844894.png"
-                    alt="Dr. Manoj standing in modern dermatology clinic wearing white coat, professional confident posture, warm clinic lighting"
+                    src="/assets/clinic/dr-manoj.jpeg"
+                    alt="Dr. Manoj Kumar Nayak, dermatologist, in a white coat"
                     fill
                     className="object-cover object-top"
                     sizes="(max-width: 1024px) 100vw, 42vw"

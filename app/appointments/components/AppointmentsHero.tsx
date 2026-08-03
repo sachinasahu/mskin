@@ -4,15 +4,15 @@ import AppImage from "../../../components/ui/AppImage";
 export default function AppointmentsHero() {
   return (
     <section
-      className="relative h-[45vh] min-h-[360px] flex items-end overflow-hidden"
+      className="relative min-h-[340px] h-[48svh] flex items-end overflow-hidden"
       aria-label="Appointments hero"
     >
       <AppImage
-        src="https://img.rocket.new/generatedImages/rocket_gen_img_188858a11-1775583651330.png"
-        alt="Clean modern dermatology clinic reception desk with soft ambient lighting, professional staff, warm welcoming atmosphere, dark interior"
+        src="/assets/clinic/services-prescription.jpeg"
+        alt="Dr. Manoj's Skin and Hair Clinic treatment services"
         fill
         priority
-        className="object-cover object-center"
+        className="object-cover object-[center_30%]"
         sizes="100vw"
       />
 

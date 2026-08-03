@@ -13,7 +13,7 @@ interface AppLogoProps {
 }
 
 const AppLogo = memo(function AppLogo({
-  src = "/assets/images/app_logo.png",
+  src = "/assets/clinic/clinic-logo.jpeg",
   iconName = "SparklesIcon",
   size = 64,
   className = "",
@@ -38,6 +38,7 @@ const AppLogo = memo(function AppLogo({
           width={size}
           height={size}
           className="flex-shrink-0"
+          style={{ objectFit: "cover", borderRadius: "9999px" }}
           priority={true}
           unoptimized={src.endsWith(".svg")}
         />

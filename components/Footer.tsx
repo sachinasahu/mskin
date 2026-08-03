@@ -37,10 +37,22 @@ export default function Footer() {
               Appointments
             </Link>
             <Link
-              href="/#services"
+              href="/services"
               className="text-sm font-medium text-white/60 hover:text-white transition-colors"
             >
               Services
+            </Link>
+            <Link
+              href="/gallery"
+              className="text-sm font-medium text-white/60 hover:text-white transition-colors"
+            >
+              Gallery
+            </Link>
+            <Link
+              href="/contact"
+              className="text-sm font-medium text-white/60 hover:text-white transition-colors"
+            >
+              Contact
             </Link>
           </nav>
 

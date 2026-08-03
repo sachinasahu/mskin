@@ -116,7 +116,7 @@ export default function HeroSection() {
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full mb-7 animate-fade-in-up">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             <span className="text-xs font-semibold text-white/90 uppercase tracking-[0.15em]">
-              Board-Certified Dermatologist
+              MD Dermatology (AIIMS)
             </span>
           </div>
 

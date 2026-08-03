@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -174,7 +176,9 @@ export default function ServicesPage() {
   const heroService = clinicServices[4];
 
   return (
-    <main className="services-luxury-page">
+    <>
+      <Header />
+      <main className="services-luxury-page pt-[72px]">
       <section className="services-hero">
         <div className="hero-bg" aria-hidden="true">
           <Image
@@ -940,6 +944,8 @@ export default function ServicesPage() {
           }
         }
       `}</style>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }

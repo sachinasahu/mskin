@@ -4,15 +4,15 @@ import AppImage from "@/components/ui/AppImage";
 export default function AboutHeroSection() {
   return (
     <section
-      className="relative h-[55vh] min-h-[420px] flex items-end overflow-hidden"
+      className="relative min-h-[390px] h-[56svh] flex items-end overflow-hidden"
       aria-label="About hero"
     >
       <AppImage
-        src="https://img.rocket.new/generatedImages/rocket_gen_img_188858a11-1775583651330.png"
-        alt="Modern dermatology clinic corridor with clean white walls, professional medical environment, soft overhead lighting, calm and clinical atmosphere"
+        src="/assets/clinic/dr-manoj.jpeg"
+        alt="Dr. Manoj Kumar Nayak, dermatologist"
         fill
         priority
-        className="object-cover object-center"
+        className="object-cover object-[center_28%]"
         sizes="100vw"
       />
 

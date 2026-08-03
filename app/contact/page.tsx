@@ -21,6 +21,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -52,7 +54,9 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-white text-neutral-950 w-full min-h-screen overflow-visible">
+    <>
+      <Header />
+      <div className="bg-white text-neutral-950 w-full min-h-screen overflow-visible pt-[72px]">
       <section className="relative bg-[linear-gradient(135deg,#1A6B6B_0%,#2C8A8A_55%,#1A6B6B_100%)] w-full overflow-hidden">
         <div className="container text-center flex flex-col items-center py-16">
           <span className="inline-flex font-medium uppercase rounded-full text-[#C9A84C] text-xs leading-4 tracking-widest border-white/30 border mb-4 px-4 py-1 items-center gap-2">
@@ -340,6 +344,8 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
-    </div>
+      </div>
+      <Footer />
+    </>
   );
 }

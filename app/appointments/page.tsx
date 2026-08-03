@@ -3,6 +3,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import AppImage from "@/components/ui/AppImage";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 interface Treatment {
   id: string;
@@ -548,7 +550,9 @@ export default function ServicesPage() {
   };
 
   return (
-    <main className="bg-background min-h-screen">
+    <>
+      <Header />
+      <main className="bg-background min-h-screen pt-[72px]">
       {/* Hero */}
       <section
         ref={heroRef}
@@ -642,7 +646,7 @@ export default function ServicesPage() {
             Not sure which treatment is right for you?
           </h2>
           <p className="text-base text-white/70 leading-relaxed mb-8">
-            Book a free skin consultation with Dr. Meghna Sharma. We'll assess
+            Book a skin consultation with Dr. Manoj Kumar Nayak. We'll assess
             your skin, understand your goals, and recommend the most effective
             treatment plan.
           </p>
@@ -667,6 +671,8 @@ export default function ServicesPage() {
           </Link>
         </div>
       </section>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }

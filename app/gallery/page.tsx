@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -178,7 +180,9 @@ export default function GalleryPage() {
       : conditions.filter((c) => c.category === selectedCategory);
 
   return (
-    <div className="gallery-page min-h-screen bg-[var(--pearl)]">
+    <>
+      <Header />
+      <div className="gallery-page min-h-screen bg-[var(--pearl)] pt-[72px]">
       {/* Hero Section */}
       <section className="px-4 pb-9 pt-9 sm:px-6 sm:pb-9 sm:pt-9 lg:px-8 lg:pb-10 lg:pt-0">
         <div className="container">
@@ -339,6 +343,8 @@ export default function GalleryPage() {
           </Link>
         </div>
       </section>
-    </div>
+      </div>
+      <Footer />
+    </>
   );
 }

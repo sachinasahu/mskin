@@ -10,6 +10,10 @@
 }
 
 :root {
+  /* Legacy components and the newer Tailwind pages share the same font tokens. */
+  --font-dm-sans: var(--font-plus-jakarta);
+  --font-cormorant: var(--font-fraunces);
+  --font-space: var(--font-plus-jakarta);
   --forest: #0E1F15;
   --forest-mid: #1A3325;
   --forest-deep: #091210;
@@ -29,7 +33,7 @@ html {
 }
 
 body {
-  font-family: var(--font-dm-sans), sans-serif;
+  font-family: var(--font-plus-jakarta), Arial, sans-serif;
   background: var(--pearl);
   color: var(--ink);
   overflow-x: hidden;

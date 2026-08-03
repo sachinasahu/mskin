@@ -64,8 +64,8 @@ export default function AboutPreviewSection() {
             <div className="relative arch-shape overflow-hidden z-10 shadow-teal-lg">
               <div className="aspect-[4/5]">
                 <AppImage
-                  src="https://img.rocket.new/generatedImages/rocket_gen_img_1ce6ab47d-1780432844894.png"
-                  alt="Dr. Manoj, board-certified dermatologist in white coat in a bright modern clinic, professional and approachable"
+                  src="/assets/clinic/dr-manoj.jpeg"
+                  alt="Dr. Manoj Kumar Nayak, dermatologist, in a white coat"
                   fill
                   className="object-cover object-top transition-transform duration-700 hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 50vw"
